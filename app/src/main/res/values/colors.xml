@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#0FCBA3</color>
+    <color name="colorPrimaryDark">#018A6D</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="colorSoftRed">#FF5757</color>
+    <color name="colorRed">#FF3030</color>
+    <color name="colorGrey">#B3AEAE</color>
+    <color name="colorGray">#908E8E</color>
+    <color name="colorDarkGrey">#707070</color>
+    <color name="colorSoftGrey">#C5C5C5</color>
+    <color name="colorBlack">#000000</color>
+    <color name="transparant">#00000000</color>
+
+    <color name="neomorph_background_color">#F1F3F6</color>
+    <color name="neomorph_shadow_color">#C2C2C7</color>
+    <color name="neomorph_highlight_color">#FFFFFF</color>
+
+    <!-- For Light UI -->
+    <color name="light">#E1E6EC</color>
+    <color name="white">#FFFFFF</color>
+    <color name="semiWhite">#F8F7F7</color>
+
+
+    <!-- For Dark UI -->
+    <color name="dark">#191A1E</color>
+    <color name="yellow">#FCC73B</color>
+    <color name="lightWhite">#4DFFFFFF</color>
+
+    <color name="loginBackground">#EAEBF3</color>
+
+</resources>

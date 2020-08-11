@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">WyromedApp</string>
+    <string name="todo">todo</string>
+
+    <!-- on boarding screen -->
+    <string name="btn_signup_on_boarding">Sign Up</string>
+    <string name="btn_signin_on_boarding">Sign In</string>
+
+
+    <!-- sign in screen -->
+    <string name="title_sign_in">Sign In</string>
+    <string name="hint_username_login">Username</string>
+    <string name="hint_password_login">Password</string>
+    <string name="btn_forget_password">Forget Password ?</string>
+    <string name="btn_sign_in">Sign In</string>
+    <string name="no_account_yet">No account yet ?</string>
+    <string name="to_sign_up">Sign Up</string>
+</resources>
