@@ -60,7 +60,7 @@
                 android:layout_height="56dp"
                 android:clickable="true"
                 android:foreground="?android:attr/selectableItemBackground"
-                android:background="@drawable/bg_button_green"
+                android:background="@drawable/bg_button_rounded_green"
                 android:text="@string/btn_signup_on_boarding"
                 android:textSize="18sp"
                 android:fontFamily="@font/montserrat_regular"
@@ -82,8 +82,7 @@
             app:neomorph_corner_radius="16dp"
             app:neomorph_highlight_color="@color/neomorph_highlight_color"
             app:neomorph_background_color="@color/light"
-            app:neomorph_shadow_color="@color/neomorph_shadow_color"
-            android:layout_marginTop="10dp">
+            app:neomorph_shadow_color="@color/neomorph_shadow_color">
 
             <Button
                 android:id="@+id/btn_signin_to_layout"
@@ -91,7 +90,7 @@
                 android:layout_height="56dp"
                 android:clickable="true"
                 android:foreground="?android:attr/selectableItemBackground"
-                android:background="@drawable/bg_button_white"
+                android:background="@drawable/bg_button_rounded_white"
                 android:text="@string/btn_signin_on_boarding"
                 android:textSize="18sp"
                 android:fontFamily="@font/montserrat_regular"

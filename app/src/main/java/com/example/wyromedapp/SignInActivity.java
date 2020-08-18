@@ -16,7 +16,7 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
 
     EditText etUsername, etPassword;
     ImageButton btnBack;
-    Button btnSignIn, btnToRegisterLayout;
+    Button btnSignIn, btnToRegisterLayout, btnForgotPassword;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,11 +29,13 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
         btnBack = findViewById(R.id.btn_back_to_layout);
         btnSignIn = findViewById(R.id.btn_sign_in);
         btnToRegisterLayout = findViewById(R.id.btn_register_layout);
+        btnForgotPassword = findViewById(R.id.btn_forgot_password);
 
         //SET LISTENER
         btnBack.setOnClickListener(this);
         btnSignIn.setOnClickListener(this);
         btnToRegisterLayout.setOnClickListener(this);
+        btnForgotPassword.setOnClickListener(this);
 
     }
 
@@ -64,6 +66,10 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
             case R.id.btn_register_layout:
                 Intent toRegister = new Intent(SignInActivity.this, SignUpActivity.class);
                 startActivity(toRegister);
+                break;
+            case R.id.btn_forgot_password:
+                Intent toForgot = new Intent(SignInActivity.this, ForgotPasswordActivity.class);
+                startActivity(toForgot);
                 break;
         }
     }

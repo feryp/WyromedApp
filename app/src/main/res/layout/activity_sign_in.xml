@@ -33,8 +33,7 @@
         <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:neomorph_shadow_type="inner"
-            app:neomorph_layer_type="hardware"
+            app:neomorph_shadow_type="outer"
             app:neomorph_corner_radius="25dp"
             app:neomorph_elevation="6dp"
             app:neomorph_view_type="rectangular"
@@ -52,16 +51,14 @@
                 android:textSize="16sp"
                 android:textColor="@color/colorPrimary"
                 android:paddingStart="10dp"
-                android:paddingEnd="10dp"
-                android:autofillHints="" />
+                android:paddingEnd="10dp" />
 
         </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
 
         <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:neomorph_shadow_type="inner"
-            app:neomorph_layer_type="hardware"
+            app:neomorph_shadow_type="outer"
             app:neomorph_corner_radius="25dp"
             app:neomorph_elevation="6dp"
             app:neomorph_view_type="rectangular"
@@ -79,8 +76,7 @@
                 android:textSize="16sp"
                 android:textColor="@color/colorPrimary"
                 android:paddingStart="10dp"
-                android:paddingEnd="10dp"
-                android:autofillHints="" />
+                android:paddingEnd="10dp" />
 
             <ImageView
                 android:id="@+id/show_pass_btn"
@@ -99,7 +95,7 @@
 
 
         <Button
-            android:id="@+id/btn_forget_password"
+            android:id="@+id/btn_forgot_password"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
@@ -148,7 +144,7 @@
                     android:id="@+id/btn_back_to_layout"
                     android:layout_width="56dp"
                     android:layout_height="56dp"
-                    android:background="@drawable/bg_button_white"
+                    android:background="@drawable/bg_button_rounded_white"
                     android:clickable="true"
                     android:focusable="true"
                     android:fontFamily="@font/montserrat_regular"
@@ -178,7 +174,7 @@
                     android:id="@+id/btn_sign_in"
                     android:layout_width="236dp"
                     android:layout_height="56dp"
-                    android:background="@drawable/bg_button_green"
+                    android:background="@drawable/bg_button_rounded_green"
                     android:clickable="true"
                     android:focusable="true"
                     android:fontFamily="@font/montserrat_regular"
