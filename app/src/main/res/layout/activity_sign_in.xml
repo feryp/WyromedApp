@@ -145,7 +145,7 @@
                 app:neomorph_view_type="rectangular">
 
                 <ImageButton
-                    android:id="@+id/btn_signup_to_layout"
+                    android:id="@+id/btn_back_to_layout"
                     android:layout_width="56dp"
                     android:layout_height="56dp"
                     android:background="@drawable/bg_button_white"
@@ -161,7 +161,7 @@
             </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
 
             <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
-                android:id="@+id/layout_btn_signup"
+                android:id="@+id/layout_btn_signin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@color/transparant"
@@ -212,6 +212,9 @@
                 android:id="@+id/btn_register_layout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
                 android:background="@color/transparant"
                 android:fontFamily="@font/montserrat_bold"
                 android:text="@string/to_sign_up"

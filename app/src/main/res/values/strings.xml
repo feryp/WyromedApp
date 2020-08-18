@@ -15,4 +15,16 @@
     <string name="btn_sign_in">Sign In</string>
     <string name="no_account_yet">No account yet ?</string>
     <string name="to_sign_up">Sign Up</string>
+
+
+    <!-- sign up screen -->
+    <string name="title_sign_up">Sign Up</string>
+    <string name="hint_username_register">Username</string>
+    <string name="hint_email_register">Email</string>
+    <string name="hint_no_handphone_register">No. Handphone</string>
+    <string name="hint_password_register">Password</string>
+    <string name="btn_sign_up">Sign Up</string>
+    <string name="already_have_an_account">Already have an account</string>
+    <string name="to_sign_in">Sign In</string>
+
 </resources>
