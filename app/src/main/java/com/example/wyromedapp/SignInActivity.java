@@ -71,6 +71,10 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
                 Intent toForgot = new Intent(SignInActivity.this, ForgotPasswordActivity.class);
                 startActivity(toForgot);
                 break;
+            case R.id.btn_sign_in:
+                Intent login = new Intent(SignInActivity.this, MainActivity.class);
+                startActivity(login);
+                break;
         }
     }
 }

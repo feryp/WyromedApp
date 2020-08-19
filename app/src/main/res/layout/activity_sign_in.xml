@@ -18,6 +18,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:contentDescription="@string/todo"
+            android:padding="8dp"
             android:src="@drawable/tv_sign_in"/>
 
 

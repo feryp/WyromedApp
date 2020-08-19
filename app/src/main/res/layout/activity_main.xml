@@ -1,19 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/light"
     tools:context=".MainActivity">
+    
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 
-    <TextView
-        android:layout_width="wrap_content"
+    <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_alignParentBottom="true"
+        app:neomorph_view_type="rectangular"
+        app:neomorph_layer_type="software"
+        app:neomorph_shadow_color="@color/neomorph_shadow_color"
+        app:neomorph_highlight_color="@color/neomorph_highlight_color"
+        app:neomorph_background_color="@color/white"
+        app:neomorph_elevation="8dp"
+        app:neomorph_shadow_type="outer"
+        app:neomorph_corner_radius="25dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <com.ismaeldivita.chipnavigation.ChipNavigationBar
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:id="@+id/botnav"
+            android:background="@drawable/bg_botnav"
+            app:cnb_menuResource="@menu/menu">
+
+        </com.ismaeldivita.chipnavigation.ChipNavigationBar>
+
+    </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
+
+</RelativeLayout>
