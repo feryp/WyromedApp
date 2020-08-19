@@ -36,8 +36,8 @@
     <string name="we_have_sent_a_password_recovery_instruction_to_your_email">We have sent a password recovery instruction to your email</string>
     <string name="btn_oke">Oke</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <!-- home screen -->
+    <string name="discover_your">Discover your</string>
 
 </resources>
