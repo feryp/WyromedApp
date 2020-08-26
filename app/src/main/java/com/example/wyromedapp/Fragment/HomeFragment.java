@@ -48,7 +48,7 @@ public class HomeFragment extends Fragment {
         adapter = new CaraouselAdapter(models, (Context) getActivity());
 
         viewPager.setAdapter(adapter);
-        viewPager.setPadding(68,0,68,0);
+        viewPager.setPadding(50,0,50,0);
 
 
         return view;
