@@ -12,7 +12,7 @@
     <RelativeLayout
         android:id="@+id/layout_anim"
         android:layout_width="match_parent"
-        android:layout_height="500dp">
+        android:layout_height="400dp">
         
         <androidx.viewpager.widget.ViewPager
             android:id="@+id/view_anim"
@@ -31,42 +31,41 @@
 
     </RelativeLayout>
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:paddingRight="10dp"
         android:paddingLeft="10dp"
-        android:orientation="vertical"
-        android:gravity="center">
+        android:paddingBottom="20dp">
 
         <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
             android:id="@+id/layout_btn_signup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_above="@+id/layout_btn_signin"
             android:background="@color/transparant"
-            app:neomorph_view_type="rectangular"
-            app:neomorph_shadow_type="outer"
-            app:neomorph_layer_type="software"
-            app:neomorph_elevation="6dp"
-            app:neomorph_corner_radius="16dp"
-            app:neomorph_highlight_color="@color/neomorph_highlight_color"
             app:neomorph_background_color="@color/light"
-            app:neomorph_shadow_color="@color/neomorph_shadow_color">
+            app:neomorph_corner_radius="16dp"
+            app:neomorph_elevation="6dp"
+            app:neomorph_highlight_color="@color/neomorph_highlight_color"
+            app:neomorph_layer_type="software"
+            app:neomorph_shadow_color="@color/neomorph_shadow_color"
+            app:neomorph_shadow_type="outer"
+            app:neomorph_view_type="rectangular">
 
             <Button
                 android:id="@+id/btn_signup_to_layout"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
-                android:clickable="true"
-                android:foreground="?android:attr/selectableItemBackground"
                 android:background="@drawable/bg_button_rounded_green"
-                android:text="@string/btn_signup_on_boarding"
-                android:textSize="18sp"
+                android:clickable="true"
+                android:focusable="true"
                 android:fontFamily="@font/montserrat_regular"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:text="@string/btn_signup_on_boarding"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
-                android:focusable="true" />
+                android:textSize="18sp" />
 
         </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
 
@@ -74,6 +73,7 @@
             android:id="@+id/layout_btn_signin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
             android:background="#00000000"
             app:neomorph_view_type="rectangular"
             app:neomorph_shadow_type="outer"
@@ -100,7 +100,7 @@
 
         </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
 
-    </LinearLayout>
+    </RelativeLayout>
 
 
 </LinearLayout>
