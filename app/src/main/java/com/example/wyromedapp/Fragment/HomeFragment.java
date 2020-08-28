@@ -26,6 +26,7 @@ public class HomeFragment extends Fragment {
     ViewPager viewPager;
     List<CarouselModel> models;
     CaraouselAdapter adapter;
+
     public HomeFragment() {
         // Required empty public constructor
     }

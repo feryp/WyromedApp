@@ -39,5 +39,9 @@
 
     <!-- home screen -->
     <string name="discover_your">Discover your</string>
+    <string name="medical_device">medical device</string>
+
+    <!-- message screen -->
+    <string name="title_message">Message</string>
 
 </resources>

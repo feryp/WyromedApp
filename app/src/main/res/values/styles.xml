@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
@@ -6,6 +6,35 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="MenuItem" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Font Family -->
+        <item name="android:fontFamily">@font/lato_bold</item>
+        <!-- Query Text Color -->
+        <item name="android:textColorPrimary">@color/colorPrimary</item>
+
+    </style>
+
+    <style name="ToolBarTheme" parent="ThemeOverlay.AppCompat.ActionBar">
+        <!-- Icon Color -->
+        <item name="android:tint">@color/colorPrimary</item>
+
+    </style>
+
+    <style name="Toolbar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="AppSearchView" parent="Widget.AppCompat.SearchView" >
+        <!-- Text Size -->
+        <item name="android:textSize">16sp</item>
+        <!-- Query Text Color -->
+        <item name="android:textColorPrimary">@color/colorPrimary</item>
+        <!-- Hint Color -->
+        <item name="android:textColorHint">@color/colorPrimary</item>
+
+
     </style>
 
 </resources>

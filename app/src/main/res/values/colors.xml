@@ -12,6 +12,7 @@
     <color name="colorBlack">#000000</color>
     <color name="transparant">#00000000</color>
     <color name="colorBackground">#F5F5F5</color>
+    <color name="colorGreySolid">#6F6F6F</color>
 
     <color name="neomorph_background_color">#F1F3F6</color>
     <color name="neomorph_shadow_color">#C2C2C7</color>
