@@ -43,5 +43,6 @@
 
     <!-- message screen -->
     <string name="title_message">Message</string>
+    <string name="delete">Delete</string>
 
 </resources>
