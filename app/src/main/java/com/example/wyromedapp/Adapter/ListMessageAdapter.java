@@ -1,5 +1,6 @@
 package com.example.wyromedapp.Adapter;
 
+import android.content.ClipData;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -43,5 +44,15 @@ public class ListMessageAdapter extends RecyclerView.Adapter<ListMessageViewHold
     @Override
     public int getItemCount() {
         return mListMessage.size();
+    }
+
+    public void removeItem(int position){
+        mListMessage.remove(position);
+        notifyItemRemoved(position);
+    }
+
+    public void restoreItem(ListMessage item, int position){
+        mListMessage.add(position,item);
+        notifyItemInserted(position);
     }
 }
