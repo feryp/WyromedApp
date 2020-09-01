@@ -45,4 +45,14 @@
     <string name="title_message">Message</string>
     <string name="delete">Delete</string>
 
+
+    <!-- profile screen -->
+    <string name="btn_edit_profile">Edit Profile</string>
+    <string name="setting_menu">Setting</string>
+    <string name="help_menu">Help</string>
+    <string name="privacy_policy_menu">Privacy Policy</string>
+    <string name="sign_out_menu">Sign Out</string>
+    <string name="username_set_profile">Username</string>
+    <string name="email_set_profile">Email</string>
+
 </resources>
