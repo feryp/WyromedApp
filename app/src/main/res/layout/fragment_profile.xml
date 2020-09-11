@@ -12,7 +12,7 @@
     <developer.shivam.crescento.CrescentoContainer
         android:id="@+id/crescentoContainer"
         android:layout_width="match_parent"
-        android:layout_height="260dp"
+        android:layout_height="258dp"
         android:elevation="16dp"
         android:scaleType="fitCenter"
         app:curvature="50dp"
@@ -52,7 +52,7 @@
                 android:id="@+id/tv_set_username"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="8dp"
                 android:fontFamily="@font/lato_bold"
                 android:text="@string/username_set_profile"
                 android:textColor="@color/white"
@@ -78,7 +78,7 @@
             <com.dd.ShadowLayout
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tv_set_email"
