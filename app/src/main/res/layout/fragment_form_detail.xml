@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.FormDetailFragment">
+
+    <TextView
+        android:id="@+id/tv_tagline_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/step_view"
+        android:text="@string/your_medical_devices"
+        android:layout_marginTop="19dp"
+        android:layout_marginStart="16dp"
+        android:textSize="24sp"
+        android:fontFamily="@font/montserrat_bold"
+        android:textColor="@color/colorPrimary"
+        />
+    <TextView
+        android:id="@+id/tv_tagline_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_tagline_1"
+        android:text="@string/booking_form"
+        android:layout_marginStart="16dp"
+        android:textSize="24sp"
+        android:fontFamily="@font/montserrat_bold"
+        android:textColor="@color/colorPrimary"
+        />
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_tagline_2"
+        android:text="@string/date_book"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:textSize="12sp"
+        android:fontFamily="@font/montserrat_regular"
+        android:textColor="@color/colorGray"
+        />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/tv_date"
+        android:layout_below="@+id/tv_tagline_2"
+        android:layout_marginTop="4dp"
+        android:text="@string/time_book"
+        android:layout_marginStart="12dp"
+        android:textSize="12sp"
+        android:fontFamily="@font/montserrat_regular"
+        android:textColor="@color/colorGray"
+        />
+
+
+
+
+</RelativeLayout>
