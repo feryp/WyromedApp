@@ -43,12 +43,12 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
     public void ShowHidePass(View view) {
         if (view.getId() == R.id.show_pass_btn){
             if (etPassword.getTransformationMethod().equals(PasswordTransformationMethod.getInstance())){
-                ((ImageView)(view)).setImageResource(R.drawable.ic_hide);
+                ((ImageView)(view)).setImageResource(R.drawable.ic_show);
                 //Show Password
                 etPassword.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
             }
             else {
-                ((ImageView)(view)).setImageResource(R.drawable.ic_show);
+                ((ImageView)(view)).setImageResource(R.drawable.ic_hide);
                 //Hide Password
                 etPassword.setTransformationMethod(PasswordTransformationMethod.getInstance());
             }
