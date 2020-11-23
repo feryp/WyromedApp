@@ -14,7 +14,7 @@ import android.widget.ImageView;
 
 public class SignUpActivity extends AppCompatActivity implements View.OnClickListener {
 
-    EditText etUsername, etEmail, etNoHandphone, etPassword;
+    EditText etFullname, etEmail, etNoHandphone, etPassword, etConfirmPassword;
     ImageButton btnBack;
     Button btnSignUp, btnToLoginLayout;
 
@@ -25,10 +25,11 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         setContentView(R.layout.activity_sign_up);
 
         //INIT VIEW
-        etUsername = findViewById(R.id.et_username_register);
+        etFullname = findViewById(R.id.et_fullname_register);
         etEmail = findViewById(R.id.et_email_register);
         etNoHandphone = findViewById(R.id.et_nohp_register);
         etPassword = findViewById(R.id.et_password_register);
+        etConfirmPassword = findViewById(R.id.et_confirm_password_register);
         btnBack = findViewById(R.id.btn_back_to_layout);
         btnSignUp = findViewById(R.id.btn_sign_up);
         btnToLoginLayout = findViewById(R.id.btn_login_layout);
@@ -43,14 +44,27 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
     public void ShowHidePass(View view) {
         if (view.getId() == R.id.show_pass_btn){
             if (etPassword.getTransformationMethod().equals(PasswordTransformationMethod.getInstance())){
-                ((ImageView)(view)).setImageResource(R.drawable.ic_hide);
+                ((ImageView)(view)).setImageResource(R.drawable.ic_show);
                 //Show Password
                 etPassword.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
             }
             else {
-                ((ImageView)(view)).setImageResource(R.drawable.ic_show);
+                ((ImageView)(view)).setImageResource(R.drawable.ic_hide);
                 //Hide Password
                 etPassword.setTransformationMethod(PasswordTransformationMethod.getInstance());
+            }
+        }
+
+        if (view.getId() == R.id.show_conf_pass_btn){
+            if (etConfirmPassword.getTransformationMethod().equals(PasswordTransformationMethod.getInstance())){
+                ((ImageView)(view)).setImageResource(R.drawable.ic_show);
+                //Show Password
+                etConfirmPassword.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+            }
+            else {
+                ((ImageView)(view)).setImageResource(R.drawable.ic_hide);
+                //Hide Password
+                etConfirmPassword.setTransformationMethod(PasswordTransformationMethod.getInstance());
             }
         }
     }

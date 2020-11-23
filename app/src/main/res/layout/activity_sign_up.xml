@@ -1,139 +1,162 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/colorBackground"
     tools:context=".SignUpActivity">
 
     <RelativeLayout
+        android:id="@+id/relativeLayout2"
         android:layout_width="match_parent"
         android:layout_height="180dp"
-        android:padding="10dp">
+        android:padding="10dp"
+        tools:ignore="MissingConstraints">
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="8dp"
             android:contentDescription="@string/todo"
-            android:src="@drawable/tv_sign_up"/>
+            android:padding="8dp"
+            android:src="@drawable/tv_sign_up" />
 
     </RelativeLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_layout_form"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:padding="10dp"
-        android:orientation="vertical">
+        app:layout_constraintBottom_toTopOf="@+id/layout_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout2"
+        tools:ignore="MissingConstraints">
 
         <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:neomorph_shadow_type="outer"
+            android:id="@+id/neomorph_fullname_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:neomorph_background_color="@color/neomorph_background_color"
             app:neomorph_corner_radius="25dp"
             app:neomorph_elevation="6dp"
-            app:neomorph_view_type="rectangular"
-            app:neomorph_shadow_color="@color/neomorph_shadow_color"
             app:neomorph_highlight_color="@color/neomorph_highlight_color"
-            app:neomorph_background_color="@color/neomorph_background_color">
+            app:neomorph_shadow_color="@color/neomorph_shadow_color"
+            app:neomorph_shadow_type="outer"
+            app:neomorph_view_type="rectangular">
 
             <EditText
-                android:id="@+id/et_username_register"
+                android:id="@+id/et_fullname_register"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
+                android:autofillHints=""
                 android:background="@drawable/container_edit_text"
-                android:hint="@string/hint_username_register"
                 android:fontFamily="@font/montserrat_regular"
+                android:hint="@string/hint_fullname_register"
                 android:inputType="textPersonName"
-                android:textSize="16sp"
-                android:textColor="@color/colorPrimary"
-                android:paddingStart="10dp"
+                android:paddingStart="20dp"
                 android:paddingEnd="10dp"
-                android:autofillHints="" />
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp" />
 
         </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
 
         <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:neomorph_shadow_type="outer"
+            android:id="@+id/neomorph_email_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/neomorph_fullname_layout"
+            app:neomorph_background_color="@color/neomorph_background_color"
             app:neomorph_corner_radius="25dp"
             app:neomorph_elevation="6dp"
-            app:neomorph_view_type="rectangular"
-            app:neomorph_shadow_color="@color/neomorph_shadow_color"
             app:neomorph_highlight_color="@color/neomorph_highlight_color"
-            app:neomorph_background_color="@color/neomorph_background_color">
+            app:neomorph_shadow_color="@color/neomorph_shadow_color"
+            app:neomorph_shadow_type="outer"
+            app:neomorph_view_type="rectangular">
 
             <EditText
                 android:id="@+id/et_email_register"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
+                android:autofillHints=""
                 android:background="@drawable/container_edit_text"
-                android:hint="@string/hint_email_register"
                 android:fontFamily="@font/montserrat_regular"
+                android:hint="@string/hint_email_register"
                 android:inputType="textEmailAddress"
-                android:textSize="16sp"
-                android:textColor="@color/colorPrimary"
-                android:paddingStart="10dp"
+                android:paddingStart="20dp"
                 android:paddingEnd="10dp"
-                android:autofillHints="" />
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp" />
 
         </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
 
         <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:neomorph_shadow_type="outer"
+            android:id="@+id/neomorph_nohp_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/neomorph_email_layout"
+            app:neomorph_background_color="@color/neomorph_background_color"
             app:neomorph_corner_radius="25dp"
             app:neomorph_elevation="6dp"
-            app:neomorph_view_type="rectangular"
-            app:neomorph_shadow_color="@color/neomorph_shadow_color"
             app:neomorph_highlight_color="@color/neomorph_highlight_color"
-            app:neomorph_background_color="@color/neomorph_background_color">
+            app:neomorph_shadow_color="@color/neomorph_shadow_color"
+            app:neomorph_shadow_type="outer"
+            app:neomorph_view_type="rectangular">
 
             <EditText
                 android:id="@+id/et_nohp_register"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
+                android:autofillHints=""
                 android:background="@drawable/container_edit_text"
-                android:hint="@string/hint_no_handphone_register"
                 android:fontFamily="@font/montserrat_regular"
+                android:hint="@string/hint_no_handphone_register"
                 android:inputType="number"
-                android:textSize="16sp"
-                android:textColor="@color/colorPrimary"
-                android:paddingStart="10dp"
+                android:paddingStart="20dp"
                 android:paddingEnd="10dp"
-                android:autofillHints="" />
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp" />
 
         </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
 
         <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:neomorph_shadow_type="outer"
+            android:id="@+id/neomorph_password_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/neomorph_nohp_layout"
+            app:neomorph_background_color="@color/neomorph_background_color"
             app:neomorph_corner_radius="25dp"
             app:neomorph_elevation="6dp"
-            app:neomorph_view_type="rectangular"
-            app:neomorph_shadow_color="@color/neomorph_shadow_color"
             app:neomorph_highlight_color="@color/neomorph_highlight_color"
-            app:neomorph_background_color="@color/neomorph_background_color">
+            app:neomorph_shadow_color="@color/neomorph_shadow_color"
+            app:neomorph_shadow_type="outer"
+            app:neomorph_view_type="rectangular">
 
             <EditText
                 android:id="@+id/et_password_register"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
+                android:autofillHints=""
                 android:background="@drawable/container_edit_text"
-                android:hint="@string/hint_password_register"
                 android:fontFamily="@font/montserrat_regular"
+                android:hint="@string/hint_password_register"
                 android:inputType="textPassword"
-                android:textSize="16sp"
-                android:textColor="@color/colorPrimary"
-                android:paddingStart="10dp"
+                android:paddingStart="20dp"
                 android:paddingEnd="10dp"
-                android:autofillHints="" />
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp" />
 
             <ImageView
                 android:id="@+id/show_pass_btn"
@@ -142,101 +165,160 @@
                 android:layout_gravity="end|center_vertical"
                 android:layout_marginEnd="8dp"
                 android:alpha=".5"
+                android:contentDescription="@string/todo"
                 android:onClick="ShowHidePass"
                 android:padding="5dp"
-                android:src="@drawable/ic_show"
-                tools:ignore="OnClick"
-                android:contentDescription="@string/todo" />
+                android:src="@drawable/ic_hide"
+                tools:ignore="OnClick" />
 
         </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
 
-    </LinearLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <LinearLayout
-            android:layout_width="match_parent"
+        <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
+            android:id="@+id/neomorph_confirm_password_layout"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/layout_login"
-            android:gravity="center"
-            android:orientation="horizontal">
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/neomorph_password_layout"
+            app:neomorph_background_color="@color/neomorph_background_color"
+            app:neomorph_corner_radius="25dp"
+            app:neomorph_elevation="6dp"
+            app:neomorph_highlight_color="@color/neomorph_highlight_color"
+            app:neomorph_shadow_color="@color/neomorph_shadow_color"
+            app:neomorph_shadow_type="outer"
+            app:neomorph_view_type="rectangular">
 
-            <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
-                android:id="@+id/layout_btn_back"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@color/transparant"
-                app:neomorph_background_color="@color/light"
-                app:neomorph_corner_radius="16dp"
-                app:neomorph_elevation="6dp"
-                app:neomorph_highlight_color="@color/neomorph_highlight_color"
-                app:neomorph_layer_type="software"
-                app:neomorph_shadow_color="@color/neomorph_shadow_color"
-                app:neomorph_shadow_type="outer"
-                app:neomorph_view_type="rectangular">
+            <EditText
+                android:id="@+id/et_confirm_password_register"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:autofillHints=""
+                android:background="@drawable/container_edit_text"
+                android:fontFamily="@font/montserrat_regular"
+                android:hint="@string/hint_confirm_password_register"
+                android:inputType="textPassword"
+                android:paddingStart="20dp"
+                android:paddingEnd="10dp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp" />
 
-                <ImageButton
-                    android:id="@+id/btn_back_to_layout"
-                    android:layout_width="56dp"
-                    android:layout_height="56dp"
-                    android:background="@drawable/bg_button_rounded_white"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:fontFamily="@font/montserrat_regular"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    android:src="@drawable/ic_arrow_left"
-                    android:textAllCaps="false"
-                    android:textColor="@color/white"
-                    android:textSize="18sp"
-                    android:contentDescription="TODO" />
+            <ImageView
+                android:id="@+id/show_conf_pass_btn"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginEnd="8dp"
+                android:alpha=".5"
+                android:contentDescription="@string/todo"
+                android:onClick="ShowHidePass"
+                android:padding="5dp"
+                android:src="@drawable/ic_hide"
+                tools:ignore="OnClick" />
 
-            </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
+        </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
 
-            <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
-                android:id="@+id/layout_btn_signup"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@color/transparant"
-                app:neomorph_background_color="@color/light"
-                app:neomorph_corner_radius="16dp"
-                app:neomorph_elevation="6dp"
-                app:neomorph_highlight_color="@color/neomorph_highlight_color"
-                app:neomorph_layer_type="software"
-                app:neomorph_shadow_color="@color/neomorph_shadow_color"
-                app:neomorph_shadow_type="outer"
-                app:neomorph_view_type="rectangular">
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-                <Button
-                    android:id="@+id/btn_sign_up"
-                    android:layout_width="236dp"
-                    android:layout_height="56dp"
-                    android:background="@drawable/bg_button_rounded_green"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:fontFamily="@font/montserrat_regular"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    android:text="@string/btn_sign_up"
-                    android:textAllCaps="false"
-                    android:textColor="@color/white"
-                    android:textSize="18sp" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/layout_already_account"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints">
 
-            </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/layout_login"
-            android:layout_width="match_parent"
+        <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
+            android:id="@+id/layout_btn_back"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
+            android:layout_marginStart="16dp"
+            android:background="@color/transparant"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:neomorph_background_color="@color/light"
+            app:neomorph_corner_radius="16dp"
+            app:neomorph_elevation="6dp"
+            app:neomorph_highlight_color="@color/neomorph_highlight_color"
+            app:neomorph_layer_type="software"
+            app:neomorph_shadow_color="@color/neomorph_shadow_color"
+            app:neomorph_shadow_type="outer"
+            app:neomorph_view_type="rectangular">
+
+            <ImageButton
+                android:id="@+id/btn_back_to_layout"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:background="@drawable/bg_button_rounded_white"
+                android:clickable="true"
+                android:contentDescription="TODO"
+                android:focusable="true"
+                android:fontFamily="@font/montserrat_regular"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:src="@drawable/ic_arrow_left"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+        </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
+
+        <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
+            android:id="@+id/layout_btn_signup"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/transparant"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/layout_btn_back"
+            app:layout_constraintTop_toTopOf="parent"
+            app:neomorph_background_color="@color/light"
+            app:neomorph_corner_radius="16dp"
+            app:neomorph_elevation="6dp"
+            app:neomorph_highlight_color="@color/neomorph_highlight_color"
+            app:neomorph_layer_type="software"
+            app:neomorph_shadow_color="@color/neomorph_shadow_color"
+            app:neomorph_shadow_type="outer"
+            app:neomorph_view_type="rectangular">
+
+            <Button
+                android:id="@+id/btn_sign_up"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@drawable/bg_button_rounded_green"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/montserrat_regular"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:text="@string/btn_sign_up"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+        </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_already_account"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:gravity="center"
-            android:orientation="horizontal">
+            tools:ignore="MissingConstraints">
 
             <TextView
+                android:id="@+id/tv_no_account_yet"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
                 android:fontFamily="@font/montserrat_regular"
                 android:text="@string/already_have_an_account"
                 android:textColor="@color/colorDarkGrey"
@@ -246,17 +328,22 @@
                 android:id="@+id/btn_login_layout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/tv_no_account_yet"
+                android:background="@color/transparant"
                 android:clickable="true"
                 android:focusable="true"
-                android:background="@color/transparant"
                 android:fontFamily="@font/montserrat_bold"
                 android:foreground="?android:attr/selectableItemBackground"
                 android:text="@string/to_sign_in"
                 android:textAllCaps="false"
                 android:textColor="@color/colorPrimary"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                />
 
-        </LinearLayout>
-    </RelativeLayout>
+        </RelativeLayout>
 
-</LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

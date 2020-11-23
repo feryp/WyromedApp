@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
     <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:background="@color/transparant"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:neomorph_background_color="@color/light"
         app:neomorph_corner_radius="14dp"
         app:neomorph_elevation="6dp"
@@ -17,112 +21,113 @@
         app:neomorph_layer_type="software"
         app:neomorph_shadow_color="@color/neomorph_shadow_color"
         app:neomorph_shadow_type="outer"
-        app:neomorph_view_type="rectangular">
+        app:neomorph_view_type="rectangular"
+        tools:ignore="MissingConstraints">
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/item_content"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:cardBackgroundColor="@color/neomorph_background_color"
-            app:cardCornerRadius="14dp">
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_menu_carousel">
 
-            <RelativeLayout
-                android:layout_width="match_parent"
+            <ImageView
+                android:id="@+id/iv_illustration_content"
+                android:layout_width="wrap_content"
+                android:layout_height="250dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/illustration_booking"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_date_content"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingStart="12dp"
-                android:paddingEnd="12dp"
-                android:paddingTop="14dp"
-                android:paddingBottom="8dp">
+                android:layout_below="@+id/iv_illustration_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/montserrat_regular"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iv_illustration_content" />
 
-                <ImageView
-                    android:id="@+id/iv_illustration_content"
-                    android:layout_width="match_parent"
-                    android:layout_height="139dp"
-                    android:scaleType="fitCenter"/>
+            <TextView
+                android:id="@+id/tv_title_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_date_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/montserrat_regular"
+                android:textColor="@color/colorPrimary"
+                android:textSize="32sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_date_content" />
 
-                <TextView
-                    android:id="@+id/tv_date_content"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout_below="@+id/iv_illustration_content"
-                    android:textSize="14sp"
-                    android:fontFamily="@font/montserrat_regular"
-                    android:textColor="@color/colorPrimary"
-                    />
+            <TextView
+                android:id="@+id/tv_total_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="@font/montserrat_regular"
+                android:textColor="@color/colorPrimary"
+                android:textSize="36sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
 
-                <TextView
-                    android:id="@+id/tv_title_content"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/tv_date_content"
-                    android:textSize="32sp"
-                    android:fontFamily="@font/montserrat_regular"
-                    android:textColor="@color/colorPrimary"
-                    />
+            <TextView
+                android:id="@+id/tv_total_field"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/montserrat_regular"
+                android:text="@string/card_total"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_total_content" />
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:orientation="horizontal"
-                    android:layout_alignParentBottom="true">
+            <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
+                android:id="@+id/layout_btn_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@color/transparant"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:neomorph_background_color="@color/light"
+                app:neomorph_corner_radius="25dp"
+                app:neomorph_elevation="6dp"
+                app:neomorph_highlight_color="@color/neomorph_highlight_color"
+                app:neomorph_layer_type="software"
+                app:neomorph_shadow_color="@color/neomorph_shadow_color"
+                app:neomorph_shadow_type="outer"
+                app:neomorph_view_type="circular">
 
-                    <TextView
-                        android:id="@+id/tv_total_content"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="28sp"
-                        android:fontFamily="@font/montserrat_regular"
-                        android:textColor="@color/colorPrimary"
-                        />
+                <ImageButton
+                    android:id="@+id/btn_more"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/bg_button_circle_white"
+                    android:src="@drawable/ic_more_horiz" />
 
-                    <TextView
-                        android:id="@+id/tv_total_field"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="4dp"
-                        android:text="Total"
-                        android:textSize="14sp"
-                        android:fontFamily="@font/montserrat_regular"
-                        android:textColor="@color/colorPrimary"
-                        />
+            </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
 
-                </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-                <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
-                    android:id="@+id/layout_btn_more"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentBottom="true"
-                    android:layout_alignParentEnd="true"
-                    android:background="@color/transparant"
-                    app:neomorph_background_color="@color/light"
-                    app:neomorph_corner_radius="25dp"
-                    app:neomorph_elevation="6dp"
-                    app:neomorph_highlight_color="@color/neomorph_highlight_color"
-                    app:neomorph_layer_type="software"
-                    app:neomorph_shadow_color="@color/neomorph_shadow_color"
-                    app:neomorph_shadow_type="outer"
-                    app:neomorph_view_type="circular">
-
-                    <ImageButton
-                        android:id="@+id/btn_more"
-                        android:layout_width="45dp"
-                        android:layout_height="45dp"
-                        android:background="@drawable/bg_button_circle_white"
-                        android:src="@drawable/ic_more_horiz" />
-
-                </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
-
-            </RelativeLayout>
-
-        </androidx.cardview.widget.CardView>
 
 
     </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
 
 
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
 
