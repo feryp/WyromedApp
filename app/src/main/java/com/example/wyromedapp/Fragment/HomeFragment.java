@@ -47,7 +47,7 @@ public class HomeFragment extends Fragment {
 
         viewPager.setAdapter(adapter);
         viewPager.setClipToPadding(false);
-        viewPager.setPadding(50, 20, 50, 0);
+        viewPager.setPadding(16, 20, 16, 0);
         viewPager.setOffscreenPageLimit(adapter.getCount());
 
 

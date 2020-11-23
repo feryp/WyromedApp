@@ -34,7 +34,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="250dp"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
                 android:scaleType="fitCenter"
                 android:src="@drawable/illustration_booking"
@@ -48,7 +47,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/iv_illustration_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="32dp"
+                android:layout_marginTop="10dp"
                 android:fontFamily="@font/montserrat_regular"
                 android:textColor="@color/colorPrimary"
                 android:textSize="14sp"
@@ -75,7 +74,7 @@
                 android:layout_marginBottom="16dp"
                 android:fontFamily="@font/montserrat_regular"
                 android:textColor="@color/colorPrimary"
-                android:textSize="36sp"
+                android:textSize="24sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
 
@@ -88,7 +87,7 @@
                 android:fontFamily="@font/montserrat_regular"
                 android:text="@string/card_total"
                 android:textColor="@color/colorPrimary"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/tv_total_content" />
 
