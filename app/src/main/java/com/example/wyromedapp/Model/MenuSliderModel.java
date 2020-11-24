@@ -2,14 +2,14 @@ package com.example.wyromedapp.Model;
 
 import java.util.Date;
 
-public class CarouselModel {
+public class MenuSliderModel {
 
     private int illustration;
     private String date;
     private String title;
     private String total;
 
-    public CarouselModel(int illustration, String date, String title, String total) {
+    public MenuSliderModel(int illustration, String date, String title, String total) {
         this.illustration = illustration;
         this.date = date;
         this.title = title;

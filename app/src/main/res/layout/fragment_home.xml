@@ -50,12 +50,13 @@
         tools:ignore="MissingConstraints" />
 
 
-    <androidx.viewpager.widget.ViewPager
+    <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/view_pager_carousel"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:foregroundGravity="center"
-        android:overScrollMode="never"
+        android:layout_marginTop="20dp"
+        android:paddingStart="70dp"
+        android:paddingEnd="70dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
