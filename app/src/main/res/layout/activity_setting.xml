@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    tools:context=".SettingActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        tools:ignore="MissingConstraints">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/ic_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/todo"
+                android:src="@drawable/ic_back_white"
+                android:background="#00000000"/>
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.7"
+                android:background="@color/colorPrimary" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorBackground" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_title_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Settings"
+            android:textColor="@color/white"
+            android:textSize="36sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title_setting">
+
+            <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
+                android:id="@+id/neomorph_company_information_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toStartOf="@+id/neomorph_account_password_layout"
+                app:layout_constraintStart_toStartOf="parent"
+                app:neomorph_background_color="@color/neomorph_background_color"
+                app:neomorph_corner_radius="14dp"
+                app:neomorph_elevation="6dp"
+                app:neomorph_highlight_color="@color/neomorph_highlight_color"
+                app:neomorph_shadow_color="@color/neomorph_shadow_color"
+                app:neomorph_shadow_type="outer"
+                app:neomorph_view_type="rectangular">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/menu_company_information"
+                    android:layout_width="150dp"
+                    android:layout_height="180dp"
+                    android:background="@drawable/bg_menu_carousel">
+
+                    <ImageView
+                        android:id="@+id/iv_illustration_company"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_marginTop="16dp"
+                        android:contentDescription="@string/todo"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_ilustration_company"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_company_information_setting"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="16dp"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:gravity="center"
+                        android:text="Company Information"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/iv_illustration_company" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
+
+            <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
+                android:id="@+id/neomorph_account_password_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/neomorph_company_information_layout"
+                app:neomorph_background_color="@color/neomorph_background_color"
+                app:neomorph_corner_radius="14dp"
+                app:neomorph_elevation="6dp"
+                app:neomorph_highlight_color="@color/neomorph_highlight_color"
+                app:neomorph_shadow_color="@color/neomorph_shadow_color"
+                app:neomorph_shadow_type="outer"
+                app:neomorph_view_type="rectangular">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/menu_account_password"
+                    android:layout_width="150dp"
+                    android:layout_height="180dp"
+                    android:background="@drawable/bg_menu_carousel">
+
+                    <ImageView
+                        android:id="@+id/iv_illustration_acc_password"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_marginTop="16dp"
+                        android:contentDescription="@string/todo"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_ilustration_account_password"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_account_password_setting"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="16dp"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:gravity="center"
+                        android:text="Account Password"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/iv_illustration_acc_password" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
+
+            <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
+                android:id="@+id/neomorph_stock_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toStartOf="@+id/neomorph_notification_layout"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/neomorph_company_information_layout"
+                app:neomorph_background_color="@color/neomorph_background_color"
+                app:neomorph_corner_radius="14dp"
+                app:neomorph_elevation="6dp"
+                app:neomorph_highlight_color="@color/neomorph_highlight_color"
+                app:neomorph_shadow_color="@color/neomorph_shadow_color"
+                app:neomorph_shadow_type="outer"
+                app:neomorph_view_type="rectangular">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/menu_stock"
+                    android:layout_width="150dp"
+                    android:layout_height="180dp"
+                    android:background="@drawable/bg_menu_carousel">
+
+                    <ImageView
+                        android:id="@+id/iv_illustration_stock"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_marginTop="16dp"
+                        android:contentDescription="@string/todo"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_ilustration_stock"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_stock_setting"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="16dp"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:gravity="center"
+                        android:text="Stock"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/iv_illustration_stock" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
+
+            <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
+                android:id="@+id/neomorph_notification_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/neomorph_stock_layout"
+                app:layout_constraintTop_toBottomOf="@+id/neomorph_account_password_layout"
+                app:neomorph_background_color="@color/neomorph_background_color"
+                app:neomorph_corner_radius="14dp"
+                app:neomorph_elevation="6dp"
+                app:neomorph_highlight_color="@color/neomorph_highlight_color"
+                app:neomorph_shadow_color="@color/neomorph_shadow_color"
+                app:neomorph_shadow_type="outer"
+                app:neomorph_view_type="rectangular">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/menu_notification"
+                    android:layout_width="150dp"
+                    android:layout_height="180dp"
+                    android:background="@drawable/bg_menu_carousel">
+
+                    <ImageView
+                        android:id="@+id/iv_illustration_notification"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_marginTop="16dp"
+                        android:contentDescription="@string/todo"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_ilustration_notification"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_notification_setting"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="16dp"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:gravity="center"
+                        android:text="Notification"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/iv_illustration_notification" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,6 +3,7 @@ package com.example.wyromedapp.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -12,6 +13,7 @@ import android.widget.Button;
 
 import com.example.wyromedapp.EditProfileActivity;
 import com.example.wyromedapp.R;
+import com.example.wyromedapp.SettingActivity;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -19,6 +21,7 @@ import com.example.wyromedapp.R;
 public class ProfileFragment extends Fragment implements View.OnClickListener {
 
     Button btnEditProfile;
+    ConstraintLayout menuSetting, menuHelp, menuPrivacy, signOut;
 
 
     public ProfileFragment() {
@@ -35,10 +38,11 @@ public class ProfileFragment extends Fragment implements View.OnClickListener {
 
         //INIT VIEW
         btnEditProfile = v.findViewById(R.id.btn_edit);
+        menuSetting = v.findViewById(R.id.setting_menu);
 
         //SET LISTENER
         btnEditProfile.setOnClickListener(ProfileFragment.this);
-
+        menuSetting.setOnClickListener(ProfileFragment.this);
         return v;
     }
 
@@ -48,6 +52,10 @@ public class ProfileFragment extends Fragment implements View.OnClickListener {
             case R.id.btn_edit:
                 Intent editProfile = new Intent(getActivity(), EditProfileActivity.class);
                 startActivity(editProfile);
+                break;
+            case R.id.setting_menu:
+                Intent menuSetting = new Intent(getActivity(), SettingActivity.class);
+                startActivity(menuSetting);
                 break;
         }
     }
