@@ -5,9 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/colorBackground"
-    android:gravity="center_horizontal"
     tools:context=".CheckEmailActivity">
 
     <ImageView
@@ -16,7 +14,7 @@
         android:layout_height="236dp"
         android:layout_marginTop="35dp"
         android:contentDescription="@string/todo"
-        android:src="@drawable/icon_ilustration_check"
+        android:src="@drawable/ic_ilustration_check"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -76,10 +74,7 @@
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:background="@drawable/bg_button_circle_green"
-            android:clickable="true"
-            android:focusable="true"
             android:fontFamily="@font/montserrat_regular"
-            android:foreground="?android:attr/selectableItemBackground"
             android:text="@string/btn_oke"
             android:textAllCaps="false"
             android:textColor="@color/white"

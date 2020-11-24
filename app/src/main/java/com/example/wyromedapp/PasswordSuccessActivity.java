@@ -7,28 +7,28 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class CheckEmailActivity extends AppCompatActivity implements View.OnClickListener {
+public class PasswordSuccessActivity extends AppCompatActivity implements View.OnClickListener {
 
-    Button btnOke;
+    Button  btnBacktoLogin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_check_email);
+        setContentView(R.layout.activity_password_success);
 
         //INIT VIEW
-        btnOke = findViewById(R.id.btn_oke);
+        btnBacktoLogin = findViewById(R.id.btn_back_to_login);
 
         //SET LISTENER
-        btnOke.setOnClickListener(this);
+        btnBacktoLogin.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()){
-            case R.id.btn_oke:
-                Intent check = new Intent(CheckEmailActivity.this, NewPasswordActivity.class);
-                startActivity(check);
+            case R.id.btn_back_to_login:
+                Intent back = new Intent(PasswordSuccessActivity.this, SignInActivity.class);
+                startActivity(back);
                 break;
         }
     }
