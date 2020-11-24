@@ -77,7 +77,11 @@
     <string name="email_set_profile">Email</string>
 
     <!-- setting screen -->
-
+    <string name="title_settings">Settings</string>
+    <string name="menu_company_information">Company Information</string>
+    <string name="menu_account_password">Account Password</string>
+    <string name="menu_stock">Stock</string>
+    <string name="menu_notification">Notification</string>
 
     <!-- booking step 1 screen -->
     <string name="app_bar_booking">Booking</string>
@@ -88,11 +92,7 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="title_settings">Settings</string>
-    <string name="menu_company_information">Company Information</string>
-    <string name="menu_account_password">Account Password</string>
-    <string name="menu_stock">Stock</string>
-    <string name="menu_notification">Notification</string>
+
 
 
 </resources>
