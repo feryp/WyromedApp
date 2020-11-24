@@ -6,16 +6,19 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
 
 import com.example.wyromedapp.Fragment.FormDetailFragment;
 import com.shuhart.stepview.StepView;
 
 import java.util.ArrayList;
 
-public class BookingActivity extends AppCompatActivity {
+public class BookingActivity extends AppCompatActivity implements View.OnClickListener {
 
     StepView stepView;
     FragmentManager fragmentManager;
+    ImageButton back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +27,7 @@ public class BookingActivity extends AppCompatActivity {
 
         //INIT VIEW
         stepView = findViewById(R.id.step_view);
+        back = findViewById(R.id.ic_back);
 
         fragmentManager = getSupportFragmentManager();
         FormDetailFragment formDetailFragment = new FormDetailFragment();
@@ -45,5 +49,17 @@ public class BookingActivity extends AppCompatActivity {
 
             }
         });
+
+        //SET LISTENER
+        back.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.ic_back:
+                finish();
+                break;
+        }
     }
 }

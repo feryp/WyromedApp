@@ -89,6 +89,11 @@
     <string name="date_book">28-July-2020</string>
     <string name="time_book">07:22:00</string>
     <string name="booking_form">Booking Form</string>
+    <string name="spinner_hospital">Hospital</string>
+    <string name="spinner_patient_name">Patient Name</string>
+    <string name="et_medical_record">Medical Record</string>
+    <string name="et_payment_status">Payment Status</string>
+    <string name="btn_next_step">Next</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

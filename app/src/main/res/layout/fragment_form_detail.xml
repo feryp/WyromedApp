@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -10,219 +11,255 @@
         android:id="@+id/tv_tagline_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/step_view"
-        android:text="@string/your_medical_devices"
-        android:layout_marginTop="19dp"
         android:layout_marginStart="16dp"
-        android:textSize="24sp"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/montserrat_bold"
+        android:text="@string/your_medical_devices"
         android:textColor="@color/colorPrimary"
-        />
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
     <TextView
         android:id="@+id/tv_tagline_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tv_tagline_1"
-        android:text="@string/booking_form"
         android:layout_marginStart="16dp"
-        android:textSize="24sp"
         android:fontFamily="@font/montserrat_bold"
+        android:text="@string/booking_form"
         android:textColor="@color/colorPrimary"
-        />
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_tagline_1"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/tv_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tv_tagline_2"
-        android:text="@string/date_book"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="4dp"
-        android:textSize="12sp"
+        android:layout_marginTop="8dp"
         android:fontFamily="@font/montserrat_regular"
+        android:text="@string/date_book"
         android:textColor="@color/colorGray"
-        />
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_tagline_2"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/tv_time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toEndOf="@+id/tv_date"
         android:layout_below="@+id/tv_tagline_2"
-        android:layout_marginTop="4dp"
-        android:text="@string/time_book"
         android:layout_marginStart="12dp"
-        android:textSize="12sp"
+        android:layout_toEndOf="@+id/tv_date"
         android:fontFamily="@font/montserrat_regular"
+        android:text="@string/time_book"
         android:textColor="@color/colorGray"
-        />
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_date"
+        app:layout_constraintTop_toTopOf="@+id/tv_date"
+        tools:ignore="MissingConstraints" />
 
-    <LinearLayout
-        android:id="@+id/container_form_detail"
-        android:layout_width="match_parent"
+    <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
+        android:id="@+id/neomorph_spinner_hospital"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_below="@+id/tv_date"
-        android:layout_marginTop="26dp">
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_date"
+        app:neomorph_background_color="@color/neomorph_background_color"
+        app:neomorph_corner_radius="25dp"
+        app:neomorph_elevation="6dp"
+        app:neomorph_highlight_color="@color/neomorph_highlight_color"
+        app:neomorph_shadow_color="@color/neomorph_shadow_color"
+        app:neomorph_shadow_type="outer"
+        app:neomorph_view_type="rectangular">
 
-        <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
+        <com.skydoves.powerspinner.PowerSpinnerView
+            android:id="@+id/spinner_hospital"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:neomorph_shadow_type="outer"
-            app:neomorph_corner_radius="25dp"
-            app:neomorph_elevation="6dp"
-            app:neomorph_view_type="rectangular"
-            app:neomorph_shadow_color="@color/neomorph_shadow_color"
-            app:neomorph_highlight_color="@color/neomorph_highlight_color"
-            app:neomorph_background_color="@color/neomorph_background_color">
+            android:layout_height="wrap_content"
+            android:background="@drawable/container_edit_text"
+            android:fontFamily="@font/montserrat_regular"
+            android:gravity="left"
+            android:hint="@string/spinner_hospital"
+            android:paddingStart="20dp"
+            android:paddingEnd="10dp"
+            android:padding="15dp"
+            android:textColor="@color/colorGray"
+            android:textColorHint="@color/colorGray"
+            android:textSize="14.5sp"
+            app:spinner_arrow_gravity="end"
+            app:spinner_arrow_padding="8dp"
+            app:spinner_arrow_tint="@color/colorGray"
+            app:spinner_divider_color="@color/colorGray"
+            app:spinner_divider_show="true"
+            app:spinner_divider_size="0.4dp"
+            app:spinner_item_array="@array/hospital"
+            app:spinner_popup_animation="dropdown"
+            app:spinner_popup_background="@color/white"
+            app:spinner_popup_elevation="14dp"
+            tools:ignore="RtlHardcoded" />
 
-            <com.skydoves.powerspinner.PowerSpinnerView
-                android:id="@+id/spinner_hospital"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/container_edit_text"
-                android:gravity="left"
-                android:hint="Hospital"
-                android:padding="12dp"
-                android:fontFamily="@font/montserrat_regular"
-                android:textColor="@color/colorGray"
-                android:textColorHint="@color/colorGray"
-                android:textSize="14.5sp"
-                app:spinner_arrow_gravity="end"
-                app:spinner_arrow_padding="8dp"
-                app:spinner_arrow_tint="@color/colorGray"
-                app:spinner_divider_color="@color/colorGray"
-                app:spinner_divider_show="true"
-                app:spinner_divider_size="0.4dp"
-                app:spinner_item_array="@array/hospital"
-                app:spinner_popup_animation="dropdown"
-                app:spinner_popup_background="@color/white"
-                app:spinner_popup_elevation="14dp"
-                tools:ignore="RtlHardcoded" />
+    </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
 
-        </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
+    <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
+        android:id="@+id/neomorph_spinner_patient"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/neomorph_spinner_hospital"
+        app:neomorph_background_color="@color/neomorph_background_color"
+        app:neomorph_corner_radius="25dp"
+        app:neomorph_elevation="6dp"
+        app:neomorph_highlight_color="@color/neomorph_highlight_color"
+        app:neomorph_shadow_color="@color/neomorph_shadow_color"
+        app:neomorph_shadow_type="outer"
+        app:neomorph_view_type="rectangular">
 
-        <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
+        <com.skydoves.powerspinner.PowerSpinnerView
+            android:id="@+id/spinner_patient"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:neomorph_shadow_type="outer"
-            app:neomorph_corner_radius="25dp"
-            app:neomorph_elevation="6dp"
-            app:neomorph_view_type="rectangular"
-            app:neomorph_shadow_color="@color/neomorph_shadow_color"
-            app:neomorph_highlight_color="@color/neomorph_highlight_color"
-            app:neomorph_background_color="@color/neomorph_background_color">
+            android:layout_height="wrap_content"
+            android:background="@drawable/container_edit_text"
+            android:fontFamily="@font/montserrat_regular"
+            android:gravity="left"
+            android:hint="@string/spinner_patient_name"
+            android:paddingStart="20dp"
+            android:paddingEnd="10dp"
+            android:padding="15dp"
+            android:textColor="@color/colorGray"
+            android:textColorHint="@color/colorGray"
+            android:textSize="14.5sp"
+            app:spinner_arrow_gravity="end"
+            app:spinner_arrow_padding="8dp"
+            app:spinner_arrow_tint="@color/colorGray"
+            app:spinner_divider_color="@color/colorGray"
+            app:spinner_divider_show="true"
+            app:spinner_divider_size="0.4dp"
+            app:spinner_item_array="@array/hospital"
+            app:spinner_popup_animation="dropdown"
+            app:spinner_popup_background="@color/white"
+            app:spinner_popup_elevation="14dp"
+            tools:ignore="RtlHardcoded" />
 
-            <com.skydoves.powerspinner.PowerSpinnerView
-                android:id="@+id/spinner_patient"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/container_edit_text"
-                android:gravity="left"
-                android:hint="Patient Name"
-                android:padding="12dp"
-                android:fontFamily="@font/montserrat_regular"
-                android:textColor="@color/colorGray"
-                android:textColorHint="@color/colorGray"
-                android:textSize="14.5sp"
-                app:spinner_arrow_gravity="end"
-                app:spinner_arrow_padding="8dp"
-                app:spinner_arrow_tint="@color/colorGray"
-                app:spinner_divider_color="@color/colorGray"
-                app:spinner_divider_show="true"
-                app:spinner_divider_size="0.4dp"
-                app:spinner_item_array="@array/hospital"
-                app:spinner_popup_animation="dropdown"
-                app:spinner_popup_background="@color/white"
-                app:spinner_popup_elevation="14dp"
-                tools:ignore="RtlHardcoded" />
+    </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
 
-        </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
+    <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
+        android:id="@+id/neomorph_medical_record"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/neomorph_spinner_patient"
+        app:neomorph_background_color="@color/neomorph_background_color"
+        app:neomorph_corner_radius="25dp"
+        app:neomorph_elevation="6dp"
+        app:neomorph_highlight_color="@color/neomorph_highlight_color"
+        app:neomorph_shadow_color="@color/neomorph_shadow_color"
+        app:neomorph_shadow_type="outer"
+        app:neomorph_view_type="rectangular">
 
-        <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
+        <EditText
+            android:id="@+id/et_medical_record"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:neomorph_shadow_type="outer"
-            app:neomorph_corner_radius="25dp"
-            app:neomorph_elevation="6dp"
-            app:neomorph_view_type="rectangular"
-            app:neomorph_shadow_color="@color/neomorph_shadow_color"
-            app:neomorph_highlight_color="@color/neomorph_highlight_color"
-            app:neomorph_background_color="@color/neomorph_background_color">
+            android:layout_height="50dp"
+            android:autofillHints=""
+            android:background="@drawable/container_edit_text"
+            android:fontFamily="@font/montserrat_regular"
+            android:hint="@string/et_medical_record"
+            android:inputType="text"
+            android:paddingStart="20dp"
+            android:paddingEnd="10dp"
+            android:padding="15dp"
+            android:textColor="@color/colorGrey"
+            android:textSize="15sp" />
 
-            <EditText
-                android:id="@+id/et_medical_record"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:background="@drawable/container_edit_text"
-                android:hint="Medical Record"
-                android:fontFamily="@font/montserrat_regular"
-                android:inputType="text"
-                android:textSize="15sp"
-                android:textColor="@color/colorGrey"
-                android:paddingStart="10dp"
-                android:paddingEnd="10dp"
-                android:autofillHints="" />
+    </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
 
-        </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
+    <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/neomorph_medical_record"
+        app:neomorph_background_color="@color/neomorph_background_color"
+        app:neomorph_corner_radius="25dp"
+        app:neomorph_elevation="6dp"
+        app:neomorph_highlight_color="@color/neomorph_highlight_color"
+        app:neomorph_shadow_color="@color/neomorph_shadow_color"
+        app:neomorph_shadow_type="outer"
+        app:neomorph_view_type="rectangular">
 
-        <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
+        <EditText
+            android:id="@+id/et_payment_status"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:neomorph_shadow_type="outer"
-            app:neomorph_corner_radius="25dp"
-            app:neomorph_elevation="6dp"
-            app:neomorph_view_type="rectangular"
-            app:neomorph_shadow_color="@color/neomorph_shadow_color"
-            app:neomorph_highlight_color="@color/neomorph_highlight_color"
-            app:neomorph_background_color="@color/neomorph_background_color">
+            android:layout_height="50dp"
+            android:autofillHints=""
+            android:background="@drawable/container_edit_text"
+            android:fontFamily="@font/montserrat_regular"
+            android:hint="@string/et_payment_status"
+            android:inputType="text"
+            android:paddingStart="20dp"
+            android:paddingEnd="10dp"
+            android:padding="15dp"
+            android:textColor="@color/colorGrey"
+            android:textSize="15sp" />
 
-            <EditText
-                android:id="@+id/et_payment_status"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:background="@drawable/container_edit_text"
-                android:hint="Payment Status"
-                android:fontFamily="@font/montserrat_regular"
-                android:inputType="text"
-                android:textSize="15sp"
-                android:textColor="@color/colorGrey"
-                android:paddingStart="10dp"
-                android:paddingEnd="10dp"
-                android:autofillHints="" />
-
-        </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
-
-    </LinearLayout>
+    </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
 
     <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
         android:id="@+id/layout_btn_next"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        app:neomorph_view_type="rectangular"
-        app:neomorph_shadow_type="outer"
-        app:neomorph_elevation="6dp"
-        app:neomorph_corner_radius="25dp"
-        app:neomorph_highlight_color="@color/neomorph_highlight_color"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:neomorph_background_color="@color/light"
-        app:neomorph_shadow_color="@color/neomorph_shadow_color">
+        app:neomorph_corner_radius="25dp"
+        app:neomorph_elevation="6dp"
+        app:neomorph_highlight_color="@color/neomorph_highlight_color"
+        app:neomorph_shadow_color="@color/neomorph_shadow_color"
+        app:neomorph_shadow_type="outer"
+        app:neomorph_view_type="rectangular"
+        tools:ignore="MissingConstraints">
 
         <Button
             android:id="@+id/btn_next"
             android:layout_width="match_parent"
             android:layout_height="56dp"
-            android:clickable="true"
-            android:foreground="?android:attr/selectableItemBackground"
             android:background="@drawable/bg_button_circle_green"
-            android:text="Next"
-            android:textSize="18sp"
+            android:clickable="true"
+            android:focusable="true"
             android:fontFamily="@font/montserrat_regular"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:text="@string/btn_next_step"
             android:textAllCaps="false"
             android:textColor="@color/white"
-            android:focusable="true" />
+            android:textSize="18sp" />
 
     </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
 
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
