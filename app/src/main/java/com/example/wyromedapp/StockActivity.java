@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -18,7 +19,7 @@ import java.util.List;
 public class StockActivity extends AppCompatActivity implements View.OnClickListener {
 
     RecyclerView rvStock;
-    ImageButton back;
+    ImageButton back, stockRequest;
     public StockAdapter adapter;
     List<Stock> stockList;
 
@@ -31,9 +32,11 @@ public class StockActivity extends AppCompatActivity implements View.OnClickList
         //INIT VIEW
         rvStock = findViewById(R.id.rv_stock);
         back = findViewById(R.id.ic_back);
+        stockRequest = findViewById(R.id.ic_stock_request);
 
         //SET LISTENER
         back.setOnClickListener(this);
+        stockRequest.setOnClickListener(this);
 
         //List Stock
         stockList = new ArrayList<>();
@@ -64,6 +67,11 @@ public class StockActivity extends AppCompatActivity implements View.OnClickList
         switch (v.getId()){
             case R.id.ic_back:
                 finish();
+                break;
+
+            case R.id.ic_stock_request:
+                Intent stockRequest = new Intent(StockActivity.this, StockRequestActivity.class);
+                startActivity(stockRequest);
                 break;
         }
     }

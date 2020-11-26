@@ -50,7 +50,7 @@
                         tools:ignore="RelativeOverlap" />
 
                     <ImageButton
-                        android:id="@+id/ic_my_booking"
+                        android:id="@+id/ic_stock_request"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="16dp"
