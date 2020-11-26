@@ -177,9 +177,9 @@
                         android:layout_height="wrap_content"
                         android:layout_column="1"
                         android:fontFamily="@font/montserrat_bold"
-                        android:gravity="left"
+                        android:gravity="start"
                         android:padding="10dp"
-                        android:text="Nama Barang"
+                        android:text="@string/tb_field_nama_barang"
                         android:textColor="@color/colorBlack"
                         android:textSize="14sp" />
 
@@ -190,7 +190,7 @@
                         android:fontFamily="@font/montserrat_bold"
                         android:gravity="center"
                         android:padding="10dp"
-                        android:text="Jumlah"
+                        android:text="@string/tb_field_jumlah"
                         android:textColor="@color/colorBlack"
                         android:textSize="14sp" />
 
@@ -199,9 +199,9 @@
                         android:layout_height="wrap_content"
                         android:layout_column="3"
                         android:fontFamily="@font/montserrat_bold"
-                        android:gravity="right"
+                        android:gravity="end"
                         android:padding="10dp"
-                        android:text="Status"
+                        android:text="@string/tb_field_status"
                         android:textColor="@color/colorBlack"
                         android:textSize="14sp" />
 
@@ -239,7 +239,7 @@
                     android:layout_height="55dp"
                     android:layout_gravity="center"
                     android:background="@drawable/bg_button_rounded_white"
-                    android:text="Confirm"
+                    android:text="@string/btn_confirm_message"
                     android:textAllCaps="false"
                     android:textColor="@color/colorPrimary"
                     android:textSize="14sp"

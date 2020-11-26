@@ -17,7 +17,7 @@
         <activity android:name=".PasswordSuccessActivity" />
         <activity android:name=".NewPasswordActivity" />
         <activity android:name=".EditProfileActivity" />
-        <activity android:name=".Adapter.StockActivity" />
+        <activity android:name=".StockActivity" />
         <activity android:name=".SalesActivity" />
         <activity android:name=".BookingActivity" />
         <activity

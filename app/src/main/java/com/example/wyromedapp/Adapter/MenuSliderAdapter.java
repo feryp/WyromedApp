@@ -9,16 +9,13 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.PagerAdapter;
-import androidx.viewpager2.widget.ViewPager2;
 
 import com.example.wyromedapp.BookingActivity;
-import com.example.wyromedapp.Interface.ItemClickListener;
 import com.example.wyromedapp.Model.MenuSliderModel;
 import com.example.wyromedapp.R;
 import com.example.wyromedapp.SalesActivity;
-import com.example.wyromedapp.ViewHolder.MenuSliderViewHolder;
+import com.example.wyromedapp.StockActivity;
 
 import java.util.List;
 
