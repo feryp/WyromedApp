@@ -116,7 +116,9 @@
     <!-- stock request screen -->
     <string name="app_bar_stock_request">Stock Request</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- dialog request success -->
+    <string name="tv_dialog_no_request">No. Request</string>
+    <string name="your_submission_for_additional_stock_has_been_submitted">Your submission for additional stock has been submitted</string>
+    <string name="dialog_btn_ok">OK</string>
 
 </resources>
