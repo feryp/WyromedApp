@@ -1,13 +1,16 @@
 package com.example.wyromedapp.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.wyromedapp.DetailSalesActivity;
 import com.example.wyromedapp.Model.Sales;
 import com.example.wyromedapp.R;
 import com.example.wyromedapp.ViewHolder.SalesViewHolder;
@@ -36,6 +39,15 @@ public class SalesAdapter extends RecyclerView.Adapter<SalesViewHolder> {
         holder.tvNoOrder.setText(salesList.get(position).getNoOrder());
         holder.tvSalesDate.setText(salesList.get(position).getSalesDate());
         holder.tvStatus.setText(salesList.get(position).getStatus());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(context,"Detal Sales",Toast.LENGTH_SHORT).show();
+                Intent detailSales = new Intent(context, DetailSalesActivity.class);
+                context.startActivity(detailSales);
+            }
+        });
     }
 
     @Override
