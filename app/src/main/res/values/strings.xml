@@ -70,8 +70,14 @@
     <!-- detail message screen -->
     <string name="tb_field_nama_barang">Nama Barang</string>
     <string name="tb_field_jumlah">Jumlah</string>
-    <string name="tb_field_status">Status</string>
     <string name="btn_confirm_message">Confirm</string>
+    <string name="title_tanggal_pesanan">Tanggal Pesanan :</string>
+    <string name="title_nomor_pesanan">Nomor Pesanan :</string>
+    <string name="title_status_pesanan">Status Pesanan :</string>
+    <string name="tv_tanggal_pesanan">12 Desember 2020</string>
+    <string name="tv_nomor_pesanan">BK-001</string>
+    <string name="tv_status_pesanan">Ready</string>
+    <string name="tv_kategori_message">Barang</string>
 
     <!-- profile screen -->
     <string name="btn_edit_profile">Edit Profile</string>
@@ -125,5 +131,19 @@
     <string name="app_bar_sales">Sales</string>
     <string name="no_order_sales">No. Order</string>
 
+    <!-- handover screen -->
+    <string name="app_bar_handover">Handover</string>
+    <string name="order_status_rental">Order Status</string>
+    <string name="title_order_rental_item">Rental Item</string>
+    <string name="order_status_purchased">Order Status</string>
+    <string name="title_order_purchased_item">Purchased Item</string>
+    <string name="btn_accept_order">Accept</string>
+
+    <!-- list item order rental item screen -->
+    <string name="tv_operation">Operation</string>
+    <string name="tv_stopwatch">00:00</string>
+
+    <!-- list item order purchased item screen -->
+    <string name="tv_amount_qty">Amount</string>
 
 </resources>

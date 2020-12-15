@@ -12,7 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:replace="android:appComponentFactory">
-        <activity android:name=".DetailSalesActivity"></activity>
+        <activity android:name=".HandoverActivity"></activity>
+        <activity android:name=".DetailSalesActivity" />
         <activity android:name=".StockRequestActivity" />
         <activity android:name=".DetailMessageActivity" />
         <activity android:name=".SettingActivity" />

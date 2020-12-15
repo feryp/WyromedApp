@@ -32,7 +32,8 @@
                 android:scaleType="centerCrop"
                 android:fitsSystemWindows="true"
                 app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed"
-                app:layout_collapseMode="parallax" />
+                app:layout_collapseMode="parallax"
+                android:contentDescription="@string/todo"/>
 
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar_detail_message"
@@ -89,61 +90,96 @@
                 app:layout_constraintTop_toBottomOf="@+id/tv_judul_keterangan_pesan"
                 tools:ignore="MissingConstraints" />
 
-            <TextView
-                android:id="@+id/tv_title_tgl_keterangan"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_info_detail_pesanan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
-                android:fontFamily="@font/lato_regular"
-                android:text="Tanggal Pesanan :"
-                android:textColor="@color/colorGreySolid"
-                android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tv_waktu_pesan"
-                tools:ignore="MissingConstraints" />
+                tools:ignore="MissingConstraints">
 
-            <TextView
-                android:id="@+id/tv_tgl_keterangan"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="16dp"
-                android:fontFamily="@font/lato_regular"
-                android:text="12 Desember 2020"
-                android:textColor="@color/colorGreySolid"
-                android:textSize="16sp"
-                app:layout_constraintStart_toEndOf="@+id/tv_title_tgl_keterangan"
-                app:layout_constraintTop_toBottomOf="@+id/tv_waktu_pesan"
-                tools:ignore="MissingConstraints" />
+                <TextView
+                    android:id="@+id/tv_title_tgl_keterangan"
+                    android:layout_width="125dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lato_regular"
+                    android:text="@string/title_tanggal_pesanan"
+                    android:textColor="@color/colorGreySolid"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="MissingConstraints" />
 
-            <TextView
-                android:id="@+id/tv_title_nomor_keterangan"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
-                android:fontFamily="@font/lato_regular"
-                android:text="Nomor Pesanan :"
-                android:textColor="@color/colorGreySolid"
-                android:textSize="16sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_title_tgl_keterangan"
-                tools:ignore="MissingConstraints" />
+                <TextView
+                    android:id="@+id/tv_tgl_keterangan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/lato_regular"
+                    android:text="@string/tv_tanggal_pesanan"
+                    android:textColor="@color/colorGreySolid"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@+id/tv_title_tgl_keterangan"
+                    tools:ignore="MissingConstraints" />
 
-            <TextView
-                android:id="@+id/tv_nomor_keterangan"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:fontFamily="@font/lato_regular"
-                android:text="BK-001"
-                android:textColor="@color/colorGreySolid"
-                android:textSize="16sp"
-                app:layout_constraintStart_toEndOf="@+id/tv_title_nomor_keterangan"
-                app:layout_constraintTop_toBottomOf="@+id/tv_tgl_keterangan"
-                tools:ignore="MissingConstraints" />
+                <TextView
+                    android:id="@+id/tv_title_nomor_keterangan"
+                    android:layout_width="125dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/lato_regular"
+                    android:text="@string/title_nomor_pesanan"
+                    android:textColor="@color/colorGreySolid"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_title_tgl_keterangan"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/tv_nomor_keterangan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/lato_regular"
+                    android:text="@string/tv_nomor_pesanan"
+                    android:textColor="@color/colorGreySolid"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@+id/tv_title_nomor_keterangan"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_tgl_keterangan"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/tv_title_status_pesanan"
+                    android:layout_width="125dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/lato_regular"
+                    android:text="@string/title_status_pesanan"
+                    android:textColor="@color/colorGreySolid"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_title_nomor_keterangan"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/tv_status_pesanan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/lato_regular"
+                    android:text="@string/tv_status_pesanan"
+                    android:textColor="@color/colorGreySolid"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@+id/tv_title_status_pesanan"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_nomor_keterangan"
+                    tools:ignore="MissingConstraints" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
 
             <TextView
                 android:id="@+id/tv_nama_kategori_pesan"
@@ -152,11 +188,11 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="30dp"
                 android:fontFamily="@font/lato_regular"
-                android:text="Barang"
+                android:text="@string/tv_kategori_message"
                 android:textColor="@color/colorBlack"
                 android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_title_nomor_keterangan"
+                app:layout_constraintTop_toBottomOf="@+id/layout_info_detail_pesanan"
                 tools:ignore="MissingConstraints" />
 
             <TableLayout
@@ -188,22 +224,12 @@
                         android:layout_height="wrap_content"
                         android:layout_column="2"
                         android:fontFamily="@font/montserrat_bold"
-                        android:gravity="center"
+                        android:gravity="end"
                         android:padding="10dp"
                         android:text="@string/tb_field_jumlah"
                         android:textColor="@color/colorBlack"
                         android:textSize="14sp" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_column="3"
-                        android:fontFamily="@font/montserrat_bold"
-                        android:gravity="end"
-                        android:padding="10dp"
-                        android:text="@string/tb_field_status"
-                        android:textColor="@color/colorBlack"
-                        android:textSize="14sp" />
 
                 </TableRow>
 

@@ -9,17 +9,16 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.wyromedapp.Interface.ItemClickListener;
 import com.example.wyromedapp.R;
 
-public class DetailPesananMessageViewHolder extends RecyclerView.ViewHolder{
+public class DetailTablePesananViewHolder extends RecyclerView.ViewHolder{
 
-    public TextView namaBarang, jumlahBarang, statusBarang;
+    public TextView namaBarang, jumlahBarang;
 
 
-    public DetailPesananMessageViewHolder(@NonNull View itemView) {
+    public DetailTablePesananViewHolder(@NonNull View itemView) {
         super(itemView);
 
         namaBarang = itemView.findViewById(R.id.tv_nama_barang_pesanan);
         jumlahBarang = itemView.findViewById(R.id.tv_jumlah_barang_pesanan);
-        statusBarang = itemView.findViewById(R.id.tv_status_barang_pesanan);
     }
 
 
