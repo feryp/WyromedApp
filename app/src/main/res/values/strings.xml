@@ -88,6 +88,11 @@
     <string name="tv_waktu_message_2">24 July 2020, 14:37</string>
     <string name="tv_title_tgl_pengajuan">Tanggal Pengajuan :</string>
     <string name="tv_tgl_pengajuan">23 July 2020</string>
+    <string name="tv_title_nomor_pengajuan">Nomor Pengajuan :</string>
+    <string name="tv_no_pengajuan">A-0119</string>
+    <string name="tv_title_disetujui_oleh">Disetujui Oleh :</string>
+    <string name="tv_disetujui_oleh">Danang Iswanto</string>
+    <string name="tv_nama_kategori_stok_barang">Stok Barang</string>
 
 
     <!-- profile screen -->
@@ -156,11 +161,7 @@
 
     <!-- list item order purchased item screen -->
     <string name="tv_amount_qty">Amount</string>
-    <string name="tv_title_nomor_pengajuan">Nomor Pengajuan :</string>
-    <string name="tv_no_pengajuan">A-0119</string>
-    <string name="tv_title_disetujui_oleh">Disetujui Oleh :</string>
-    <string name="tv_disetujui_oleh">Danang Iswanto</string>
-    <string name="tv_nama_kategori_stok_barang">Stok Barang</string>
+
 
 
 </resources>
