@@ -59,221 +59,462 @@
         android:paddingBottom="100dp"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/tv_judul_keterangan_pesan"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="28dp"
-                android:text="Pesanan RS Omni Pulomas"
-                android:textColor="@color/colorBlack"
-                android:textSize="26sp"
-                android:fontFamily="@font/lato_regular"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="MissingConstraints" />
-
-            <TextView
-                android:id="@+id/tv_waktu_pesan"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:fontFamily="@font/lato_regular"
-                android:text="12 Desember 2020, 17:45"
-                android:textColor="@color/colorGreySolid"
-                android:textSize="14sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_judul_keterangan_pesan"
-                tools:ignore="MissingConstraints" />
+            android:layout_height="wrap_content">
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/layout_info_detail_pesanan"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_waktu_pesan"
-                tools:ignore="MissingConstraints">
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/layout_content_order_item"
+                android:visibility="visible">
 
                 <TextView
-                    android:id="@+id/tv_title_tgl_keterangan"
-                    android:layout_width="125dp"
+                    android:id="@+id/tv_judul_keterangan_pesanan"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="28dp"
+                    android:text="@string/tv_judul_keterangan_message_1"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="26sp"
                     android:fontFamily="@font/lato_regular"
-                    android:text="@string/title_tanggal_pesanan"
-                    android:textColor="@color/colorGreySolid"
-                    android:textSize="16sp"
                     app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
                     tools:ignore="MissingConstraints" />
 
                 <TextView
-                    android:id="@+id/tv_tgl_keterangan"
+                    android:id="@+id/tv_waktu_pesanan"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
+                    android:layout_marginStart="16dp"
+                    android:fontFamily="@font/lato_regular"
+                    android:text="@string/tv_waktu_message_1"
+                    android:textColor="@color/colorGreySolid"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_judul_keterangan_pesanan"
+                    tools:ignore="MissingConstraints" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_info_detail_pesanan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
-                    android:fontFamily="@font/lato_regular"
-                    android:text="@string/tv_tanggal_pesanan"
-                    android:textColor="@color/colorGreySolid"
-                    android:textSize="16sp"
-                    app:layout_constraintStart_toEndOf="@+id/tv_title_tgl_keterangan"
-                    tools:ignore="MissingConstraints" />
-
-                <TextView
-                    android:id="@+id/tv_title_nomor_keterangan"
-                    android:layout_width="125dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:fontFamily="@font/lato_regular"
-                    android:text="@string/title_nomor_pesanan"
-                    android:textColor="@color/colorGreySolid"
-                    android:textSize="16sp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_title_tgl_keterangan"
-                    tools:ignore="MissingConstraints" />
+                    app:layout_constraintTop_toBottomOf="@+id/tv_waktu_pesanan"
+                    tools:ignore="MissingConstraints">
+
+                    <TextView
+                        android:id="@+id/tv_title_tgl_pesanan"
+                        android:layout_width="125dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="@string/title_tanggal_pesanan"
+                        android:textColor="@color/colorGreySolid"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        tools:ignore="MissingConstraints" />
+
+                    <TextView
+                        android:id="@+id/tv_tgl_pesanan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="@string/tv_tanggal_pesanan"
+                        android:textColor="@color/colorGreySolid"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toEndOf="@+id/tv_title_tgl_pesanan"
+                        tools:ignore="MissingConstraints" />
+
+                    <TextView
+                        android:id="@+id/tv_title_nomor_pesanan"
+                        android:layout_width="125dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="@string/title_nomor_pesanan"
+                        android:textColor="@color/colorGreySolid"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_title_tgl_pesanan"
+                        tools:ignore="MissingConstraints" />
+
+                    <TextView
+                        android:id="@+id/tv_nomor_pesanan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="@string/tv_nomor_pesanan"
+                        android:textColor="@color/colorGreySolid"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toEndOf="@+id/tv_title_nomor_pesanan"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_tgl_pesanan"
+                        tools:ignore="MissingConstraints" />
+
+                    <TextView
+                        android:id="@+id/tv_title_status_pesanan"
+                        android:layout_width="125dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="@string/title_status_pesanan"
+                        android:textColor="@color/colorGreySolid"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_title_nomor_pesanan"
+                        tools:ignore="MissingConstraints" />
+
+                    <TextView
+                        android:id="@+id/tv_status_pesanan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="@string/tv_status_pesanan"
+                        android:textColor="@color/colorGreySolid"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toEndOf="@+id/tv_title_status_pesanan"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_nomor_pesanan"
+                        tools:ignore="MissingConstraints" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
 
                 <TextView
-                    android:id="@+id/tv_nomor_keterangan"
+                    android:id="@+id/tv_nama_kategori_barang"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="30dp"
                     android:fontFamily="@font/lato_regular"
-                    android:text="@string/tv_nomor_pesanan"
-                    android:textColor="@color/colorGreySolid"
-                    android:textSize="16sp"
-                    app:layout_constraintStart_toEndOf="@+id/tv_title_nomor_keterangan"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_tgl_keterangan"
-                    tools:ignore="MissingConstraints" />
-
-                <TextView
-                    android:id="@+id/tv_title_status_pesanan"
-                    android:layout_width="125dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:fontFamily="@font/lato_regular"
-                    android:text="@string/title_status_pesanan"
-                    android:textColor="@color/colorGreySolid"
-                    android:textSize="16sp"
+                    android:text="@string/tv_kategori_message"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="20sp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_title_nomor_keterangan"
+                    app:layout_constraintTop_toBottomOf="@+id/layout_info_detail_pesanan"
                     tools:ignore="MissingConstraints" />
 
-                <TextView
-                    android:id="@+id/tv_status_pesanan"
+                <TableLayout
+                    android:id="@+id/table_layout_barang_pesanan"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="16dp"
+                    android:stretchColumns="1,2,3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_nama_kategori_barang"
+                    tools:ignore="MissingConstraints">
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1"
+                            android:fontFamily="@font/montserrat_bold"
+                            android:gravity="start"
+                            android:padding="10dp"
+                            android:text="@string/tb_field_nama_barang"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="2"
+                            android:fontFamily="@font/montserrat_bold"
+                            android:gravity="end"
+                            android:padding="10dp"
+                            android:text="@string/tb_field_jumlah"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="14sp" />
+
+
+                    </TableRow>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_table_barang_pesanan_detail_message"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="vertical"
+                        />
+
+                </TableLayout>
+
+                <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
+                    android:id="@+id/layout_btn_confirm_pesanan"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:fontFamily="@font/lato_regular"
-                    android:text="@string/tv_status_pesanan"
-                    android:textColor="@color/colorGreySolid"
-                    android:textSize="16sp"
-                    app:layout_constraintStart_toEndOf="@+id/tv_title_status_pesanan"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_nomor_keterangan"
-                    tools:ignore="MissingConstraints" />
+                    android:layout_marginTop="32dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/table_layout_barang_pesanan"
+                    app:neomorph_background_color="@color/light"
+                    app:neomorph_corner_radius="25dp"
+                    app:neomorph_elevation="6dp"
+                    app:neomorph_highlight_color="@color/neomorph_highlight_color"
+                    app:neomorph_shadow_color="@color/neomorph_shadow_color"
+                    app:neomorph_shadow_type="outer"
+                    app:neomorph_view_type="rectangular"
+                    tools:ignore="MissingConstraints">
+
+                    <Button
+                        android:id="@+id/btn_confirm_pesanan"
+                        android:layout_width="150dp"
+                        android:layout_height="55dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/bg_button_rounded_white"
+                        android:text="@string/btn_confirm_message"
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/montserrat_bold" />
+
+                </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-
-            <TextView
-                android:id="@+id/tv_nama_kategori_pesan"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="30dp"
-                android:fontFamily="@font/lato_regular"
-                android:text="@string/tv_kategori_message"
-                android:textColor="@color/colorBlack"
-                android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/layout_info_detail_pesanan"
-                tools:ignore="MissingConstraints" />
-
-            <TableLayout
-                android:id="@+id/tableLayout"
-                android:layout_width="0dp"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="16dp"
-                android:stretchColumns="1,2,3"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_nama_kategori_pesan"
-                tools:ignore="MissingConstraints">
+                android:id="@+id/layout_content_request_stock"
+                android:visibility="gone">
 
-                <TableRow>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_column="1"
-                        android:fontFamily="@font/montserrat_bold"
-                        android:gravity="start"
-                        android:padding="10dp"
-                        android:text="@string/tb_field_nama_barang"
-                        android:textColor="@color/colorBlack"
-                        android:textSize="14sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_column="2"
-                        android:fontFamily="@font/montserrat_bold"
-                        android:gravity="end"
-                        android:padding="10dp"
-                        android:text="@string/tb_field_jumlah"
-                        android:textColor="@color/colorBlack"
-                        android:textSize="14sp" />
-
-
-                </TableRow>
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/rv_table_detail_message"
-                    android:layout_width="match_parent"
+                <TextView
+                    android:id="@+id/tv_judul_keterangan_request"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:scrollbars="vertical"
-                    />
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="28dp"
+                    android:text="@string/tv_judul_keterangan_message_2"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="26sp"
+                    android:fontFamily="@font/lato_regular"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints" />
 
-            </TableLayout>
-
-            <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
-                android:id="@+id/layout_btn_confirm"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tableLayout"
-                app:neomorph_background_color="@color/light"
-                app:neomorph_corner_radius="25dp"
-                app:neomorph_elevation="6dp"
-                app:neomorph_highlight_color="@color/neomorph_highlight_color"
-                app:neomorph_shadow_color="@color/neomorph_shadow_color"
-                app:neomorph_shadow_type="outer"
-                app:neomorph_view_type="rectangular"
-                tools:ignore="MissingConstraints">
-
-                <Button
-                    android:id="@+id/btn_confirm_message"
-                    android:layout_width="150dp"
-                    android:layout_height="55dp"
-                    android:layout_gravity="center"
-                    android:background="@drawable/bg_button_rounded_white"
-                    android:text="@string/btn_confirm_message"
-                    android:textAllCaps="false"
-                    android:textColor="@color/colorPrimary"
+                <TextView
+                    android:id="@+id/tv_waktu_request"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:fontFamily="@font/lato_regular"
+                    android:text="@string/tv_waktu_message_2"
+                    android:textColor="@color/colorGreySolid"
                     android:textSize="14sp"
-                    android:fontFamily="@font/montserrat_bold" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_judul_keterangan_request"
+                    tools:ignore="MissingConstraints" />
 
-            </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_info_detail_request"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_waktu_request"
+                    tools:ignore="MissingConstraints">
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                    <TextView
+                        android:id="@+id/tv_title_tgl_pengajuan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="@string/tv_title_tgl_pengajuan"
+                        android:textColor="@color/colorGreySolid"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        tools:ignore="MissingConstraints" />
+
+                    <TextView
+                        android:id="@+id/tv_tgl_pengajuan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="@string/tv_tgl_pengajuan"
+                        android:textColor="@color/colorGreySolid"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toEndOf="@+id/tv_title_tgl_pengajuan"
+                        tools:ignore="MissingConstraints" />
+
+                    <TextView
+                        android:id="@+id/tv_title_nomor_pengajuan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="@string/tv_title_nomor_pengajuan"
+                        android:textColor="@color/colorGreySolid"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_title_tgl_pengajuan"
+                        tools:ignore="MissingConstraints" />
+
+                    <TextView
+                        android:id="@+id/tv_nomor_pengajuan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="@string/tv_no_pengajuan"
+                        android:textColor="@color/colorGreySolid"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toEndOf="@+id/tv_title_nomor_pengajuan"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_tgl_pengajuan"
+                        tools:ignore="MissingConstraints" />
+
+                    <TextView
+                        android:id="@+id/tv_title_disetujui_oleh"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="@string/tv_title_disetujui_oleh"
+                        android:textColor="@color/colorGreySolid"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_title_nomor_pengajuan"
+                        tools:ignore="MissingConstraints" />
+
+                    <TextView
+                        android:id="@+id/tv_nama_disetujui"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="@string/tv_disetujui_oleh"
+                        android:textColor="@color/colorGreySolid"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toEndOf="@+id/tv_title_disetujui_oleh"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_nomor_pengajuan"
+                        tools:ignore="MissingConstraints" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <TextView
+                    android:id="@+id/tv_nama_kategori_stock_barang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/lato_regular"
+                    android:text="@string/tv_nama_kategori_stok_barang"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/layout_info_detail_request"
+                    tools:ignore="MissingConstraints" />
+
+                <TableLayout
+                    android:id="@+id/table_layout_stock_barang"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="16dp"
+                    android:stretchColumns="1,2,3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_nama_kategori_stock_barang"
+                    tools:ignore="MissingConstraints">
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1"
+                            android:fontFamily="@font/montserrat_bold"
+                            android:gravity="start"
+                            android:padding="10dp"
+                            android:text="@string/tb_field_nama_barang"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="2"
+                            android:fontFamily="@font/montserrat_bold"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="@string/tb_field_stok_awal"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="2"
+                            android:fontFamily="@font/montserrat_bold"
+                            android:gravity="end"
+                            android:padding="10dp"
+                            android:text="@string/tb_field_stok_akhir"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="14sp" />
+
+
+                    </TableRow>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_table_stock_barang_detail_message"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="vertical"
+                        />
+
+                </TableLayout>
+
+                <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
+                    android:id="@+id/layout_btn_confirm_request_stock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/table_layout_stock_barang"
+                    app:neomorph_background_color="@color/light"
+                    app:neomorph_corner_radius="25dp"
+                    app:neomorph_elevation="6dp"
+                    app:neomorph_highlight_color="@color/neomorph_highlight_color"
+                    app:neomorph_shadow_color="@color/neomorph_shadow_color"
+                    app:neomorph_shadow_type="outer"
+                    app:neomorph_view_type="rectangular"
+                    tools:ignore="MissingConstraints">
+
+                    <Button
+                        android:id="@+id/btn_confirm_request_stock"
+                        android:layout_width="150dp"
+                        android:layout_height="55dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/bg_button_rounded_white"
+                        android:text="@string/btn_confirm_message"
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/montserrat_bold" />
+
+                </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </FrameLayout>
+
+
+
+
 
     </androidx.core.widget.NestedScrollView>
 

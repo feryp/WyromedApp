@@ -67,7 +67,7 @@
     <string name="title_message">Message</string>
     <string name="delete">Delete</string>
 
-    <!-- detail message screen -->
+    <!-- detail message pesanan barang screen -->
     <string name="tb_field_nama_barang">Nama Barang</string>
     <string name="tb_field_jumlah">Jumlah</string>
     <string name="btn_confirm_message">Confirm</string>
@@ -78,6 +78,17 @@
     <string name="tv_nomor_pesanan">BK-001</string>
     <string name="tv_status_pesanan">Ready</string>
     <string name="tv_kategori_message">Barang</string>
+    <string name="tv_judul_keterangan_message_1">Pesanan RS Omni Pulomas</string>
+    <string name="tv_waktu_message_1">12 Desember 2020, 17:45</string>
+
+    <!-- detail message stock barang screen -->
+    <string name="tb_field_stok_awal">Stok Awal</string>
+    <string name="tb_field_stok_akhir">Stok Akhir</string>
+    <string name="tv_judul_keterangan_message_2">Pengurangan Stok</string>
+    <string name="tv_waktu_message_2">24 July 2020, 14:37</string>
+    <string name="tv_title_tgl_pengajuan">Tanggal Pengajuan :</string>
+    <string name="tv_tgl_pengajuan">23 July 2020</string>
+
 
     <!-- profile screen -->
     <string name="btn_edit_profile">Edit Profile</string>
@@ -145,5 +156,11 @@
 
     <!-- list item order purchased item screen -->
     <string name="tv_amount_qty">Amount</string>
+    <string name="tv_title_nomor_pengajuan">Nomor Pengajuan :</string>
+    <string name="tv_no_pengajuan">A-0119</string>
+    <string name="tv_title_disetujui_oleh">Disetujui Oleh :</string>
+    <string name="tv_disetujui_oleh">Danang Iswanto</string>
+    <string name="tv_nama_kategori_stok_barang">Stok Barang</string>
+
 
 </resources>

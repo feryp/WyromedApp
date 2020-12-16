@@ -18,10 +18,10 @@ import java.util.List;
 
 public class DetailMessageActivity extends AppCompatActivity implements View.OnClickListener{
 
-    RecyclerView rvTableMessage;
+    RecyclerView rvTableBarangPesanan;
     DetailTablePesananAdapter adapter;
     Toolbar toolbar;
-    Button btnConfirm;
+    Button btnConfirmPesanan;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,9 +29,9 @@ public class DetailMessageActivity extends AppCompatActivity implements View.OnC
         setContentView(R.layout.activity_detail_message);
 
         //INIT VIEW
-        rvTableMessage = findViewById(R.id.rv_table_detail_message);
+        rvTableBarangPesanan = findViewById(R.id.rv_table_barang_pesanan_detail_message);
         toolbar = findViewById(R.id.toolbar_detail_message);
-        btnConfirm = findViewById(R.id.btn_confirm_message);
+        btnConfirmPesanan = findViewById(R.id.btn_confirm_pesanan);
 
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -47,14 +47,14 @@ public class DetailMessageActivity extends AppCompatActivity implements View.OnC
         setRecyclerView();
 
         //SET LISTENER
-        btnConfirm.setOnClickListener(this);
+        btnConfirmPesanan.setOnClickListener(this);
     }
 
     private void setRecyclerView() {
-        rvTableMessage.setHasFixedSize(true);
-        rvTableMessage.setLayoutManager(new LinearLayoutManager(this));
+        rvTableBarangPesanan.setHasFixedSize(true);
+        rvTableBarangPesanan.setLayoutManager(new LinearLayoutManager(this));
         adapter = new DetailTablePesananAdapter(this,getList());
-        rvTableMessage.setAdapter(adapter);
+        rvTableBarangPesanan.setAdapter(adapter);
     }
 
     private List<DetailTablePesanan> getList(){
@@ -77,7 +77,7 @@ public class DetailMessageActivity extends AppCompatActivity implements View.OnC
     @Override
     public void onClick(View v) {
         switch (v.getId()){
-            case R.id.btn_confirm_message:
+            case R.id.btn_confirm_pesanan:
                 Intent confim = new Intent(DetailMessageActivity.this, HandoverActivity.class);
                 startActivity(confim);
                 break;

@@ -17,8 +17,8 @@ public class DetailTablePesananViewHolder extends RecyclerView.ViewHolder{
     public DetailTablePesananViewHolder(@NonNull View itemView) {
         super(itemView);
 
-        namaBarang = itemView.findViewById(R.id.tv_nama_barang_pesanan);
-        jumlahBarang = itemView.findViewById(R.id.tv_jumlah_barang_pesanan);
+        namaBarang = itemView.findViewById(R.id.tv_nama_barang_field_pesanan);
+        jumlahBarang = itemView.findViewById(R.id.tv_jumlah_barang_field_pesanan);
     }
 
 
