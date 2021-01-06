@@ -15,20 +15,10 @@ import com.example.wyromedapp.EditProfileActivity;
 import com.example.wyromedapp.R;
 import com.example.wyromedapp.SettingActivity;
 
-/**
- * A simple {@link Fragment} subclass.
- */
+
 public class ProfileFragment extends Fragment implements View.OnClickListener {
 
-    Button btnEditProfile;
-    ConstraintLayout menuSetting, menuHelp, menuPrivacy, signOut;
-
-
-    public ProfileFragment() {
-        // Required empty public constructor
-    }
-
-
+    ConstraintLayout menuHistoryTransactions, menuSetting, menuHelp, signOut;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -37,11 +27,9 @@ public class ProfileFragment extends Fragment implements View.OnClickListener {
         View v = inflater.inflate(R.layout.fragment_profile, container, false);
 
         //INIT VIEW
-        btnEditProfile = v.findViewById(R.id.btn_edit);
-        menuSetting = v.findViewById(R.id.setting_menu);
+        menuSetting = v.findViewById(R.id.menu_settings);
 
         //SET LISTENER
-        btnEditProfile.setOnClickListener(ProfileFragment.this);
         menuSetting.setOnClickListener(ProfileFragment.this);
         return v;
     }
@@ -49,11 +37,7 @@ public class ProfileFragment extends Fragment implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         switch (v.getId()){
-            case R.id.btn_edit:
-                Intent editProfile = new Intent(getActivity(), EditProfileActivity.class);
-                startActivity(editProfile);
-                break;
-            case R.id.setting_menu:
+            case R.id.menu_settings:
                 Intent menuSetting = new Intent(getActivity(), SettingActivity.class);
                 startActivity(menuSetting);
                 break;

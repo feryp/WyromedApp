@@ -112,14 +112,14 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/menu_history_transactions"
-                android:layout_width="130dp"
-                android:layout_height="130dp"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
                 android:background="@drawable/bg_menu_carousel">
 
                 <ImageView
                     android:id="@+id/iv_illustration_history"
-                    android:layout_width="65dp"
-                    android:layout_height="65dp"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
                     android:layout_marginTop="16dp"
                     android:contentDescription="@string/todo"
                     android:scaleType="fitCenter"
@@ -139,7 +139,7 @@
                     android:gravity="center"
                     android:text="@string/history_menu"
                     android:textColor="@color/colorPrimary"
-                    android:textSize="12sp"
+                    android:textSize="18sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -168,14 +168,14 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/menu_settings"
-                android:layout_width="130dp"
-                android:layout_height="130dp"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
                 android:background="@drawable/bg_menu_carousel">
 
                 <ImageView
                     android:id="@+id/iv_illustration_settings"
-                    android:layout_width="65dp"
-                    android:layout_height="65dp"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
                     android:layout_marginTop="16dp"
                     android:contentDescription="@string/todo"
                     android:scaleType="fitCenter"
@@ -195,7 +195,7 @@
                     android:gravity="center"
                     android:text="@string/setting_menu"
                     android:textColor="@color/colorPrimary"
-                    android:textSize="12sp"
+                    android:textSize="18sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -225,14 +225,14 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/menu_help_support"
-                android:layout_width="130dp"
-                android:layout_height="130dp"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
                 android:background="@drawable/bg_menu_carousel">
 
                 <ImageView
                     android:id="@+id/iv_illustration_help"
-                    android:layout_width="65dp"
-                    android:layout_height="65dp"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
                     android:layout_marginTop="16dp"
                     android:contentDescription="@string/todo"
                     android:scaleType="fitCenter"
@@ -252,7 +252,7 @@
                     android:gravity="center"
                     android:text="@string/help_menu"
                     android:textColor="@color/colorPrimary"
-                    android:textSize="12sp"
+                    android:textSize="18sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -282,14 +282,14 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/menu_sign_out"
-                android:layout_width="130dp"
-                android:layout_height="130dp"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
                 android:background="@drawable/bg_menu_carousel">
 
                 <ImageView
                     android:id="@+id/iv_illustration_sign_out"
-                    android:layout_width="65dp"
-                    android:layout_height="65dp"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
                     android:layout_marginTop="16dp"
                     android:contentDescription="@string/todo"
                     android:scaleType="fitCenter"
@@ -309,7 +309,7 @@
                     android:gravity="center"
                     android:text="@string/sign_out_menu"
                     android:textColor="@color/colorPrimary"
-                    android:textSize="12sp"
+                    android:textSize="18sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"

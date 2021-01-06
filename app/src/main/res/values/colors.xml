@@ -9,6 +9,7 @@
     <color name="colorGray">#908E8E</color>
     <color name="colorDarkGrey">#707070</color>
     <color name="colorSoftGrey">#C5C5C5</color>
+    <color name="colorLine">#D4D4D4</color>
     <color name="colorBlack">#000000</color>
     <color name="transparant">#00000000</color>
     <color name="colorBackground">#F5F5F5</color>
