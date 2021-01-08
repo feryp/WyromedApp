@@ -36,7 +36,7 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <TextView
-                    android:id="@+id/tv_title_no_order_sales"
+                    android:id="@+id/tv_title_no_order_booking"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/montserrat_regular"
@@ -45,20 +45,20 @@
                     android:textSize="12sp" />
 
                 <TextView
-                    android:id="@+id/tv_order_sales"
+                    android:id="@+id/tv_order_booking"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/montserrat_regular"
-                    tools:text="A-112"
+                    tools:text="BK-001"
                     android:textColor="@color/colorPrimary"
-                    android:textSize="32sp"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_title_no_order_sales" />
+                    android:textSize="42sp"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_title_no_order_booking" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
 
             <TextView
-                android:id="@+id/tv_tgl_sales"
+                android:id="@+id/tv_tgl_order_booking"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
@@ -71,7 +71,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/tv_status_sales"
+                android:id="@+id/tv_status_booking"
                 android:layout_width="80dp"
                 android:layout_height="20dp"
                 android:layout_marginEnd="16dp"
@@ -79,7 +79,7 @@
                 android:background="@drawable/bg_status_sales"
                 android:fontFamily="@font/montserrat_regular"
                 android:gravity="center"
-                tools:text="Finish"
+                tools:text="Order"
                 android:textColor="@color/white"
                 android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="parent"

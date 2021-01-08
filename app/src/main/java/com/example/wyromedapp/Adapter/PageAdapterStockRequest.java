@@ -29,12 +29,10 @@ public class PageAdapterStockRequest extends FragmentStatePagerAdapter {
     public Fragment getItem(int position) {
         switch (position){
             case 0:
-                PenambahanStockFragment penambahanStock = new PenambahanStockFragment();
-                return  penambahanStock;
+                return new PenambahanStockFragment();
 
             case 1:
-                PenguranganStockFragment penguranganStock = new PenguranganStockFragment();
-                return penguranganStock;
+                return new PenguranganStockFragment();
 
             default:
                 return null;

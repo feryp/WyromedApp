@@ -146,7 +146,7 @@
 
     <!-- sales screen -->
     <string name="app_bar_sales">Sales</string>
-    <string name="no_order_sales">No. Order</string>
+    <string name="no_order_sales">No. Sales</string>
 
     <!-- handover screen -->
     <string name="app_bar_handover">Handover</string>
@@ -162,6 +162,9 @@
 
     <!-- list item order purchased item screen -->
     <string name="tv_amount_qty">Amount</string>
+
+    <!-- list item history stock item screen -->
+    <string name="no_request_stock">No. Request</string>
 
 
 

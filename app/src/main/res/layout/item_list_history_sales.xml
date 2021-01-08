@@ -45,7 +45,7 @@
                     android:textSize="12sp" />
 
                 <TextView
-                    android:id="@+id/tv_order_sales"
+                    android:id="@+id/tv_no_order_history_sales"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/montserrat_regular"
@@ -58,7 +58,7 @@
 
 
             <TextView
-                android:id="@+id/tv_tgl_sales"
+                android:id="@+id/tv_tgl_history_sales"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
@@ -70,20 +70,6 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/tv_status_sales"
-                android:layout_width="80dp"
-                android:layout_height="20dp"
-                android:layout_marginEnd="16dp"
-                android:layout_marginBottom="16dp"
-                android:background="@drawable/bg_status_sales"
-                android:fontFamily="@font/montserrat_regular"
-                android:gravity="center"
-                tools:text="Finish"
-                android:textColor="@color/white"
-                android:textSize="12sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

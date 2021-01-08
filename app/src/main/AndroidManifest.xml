@@ -12,7 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:replace="android:appComponentFactory">
-        <activity android:name=".HandoverActivity"></activity>
+        <activity android:name=".MyBookingActivity"></activity>
+        <activity android:name=".HistoryTransactionsActivity" />
+        <activity android:name=".HandoverActivity" />
         <activity android:name=".DetailSalesActivity" />
         <activity android:name=".StockRequestActivity" />
         <activity android:name=".DetailMessageActivity" />

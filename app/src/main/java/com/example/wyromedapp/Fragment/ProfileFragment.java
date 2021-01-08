@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.example.wyromedapp.EditProfileActivity;
+import com.example.wyromedapp.HistoryTransactionsActivity;
 import com.example.wyromedapp.R;
 import com.example.wyromedapp.SettingActivity;
 
@@ -27,10 +28,12 @@ public class ProfileFragment extends Fragment implements View.OnClickListener {
         View v = inflater.inflate(R.layout.fragment_profile, container, false);
 
         //INIT VIEW
+        menuHistoryTransactions = v.findViewById(R.id.menu_history_transactions);
         menuSetting = v.findViewById(R.id.menu_settings);
 
         //SET LISTENER
         menuSetting.setOnClickListener(ProfileFragment.this);
+        menuHistoryTransactions.setOnClickListener(ProfileFragment.this);
         return v;
     }
 
@@ -40,6 +43,11 @@ public class ProfileFragment extends Fragment implements View.OnClickListener {
             case R.id.menu_settings:
                 Intent menuSetting = new Intent(getActivity(), SettingActivity.class);
                 startActivity(menuSetting);
+                break;
+
+            case R.id.menu_history_transactions:
+                Intent menuHistory = new Intent(getActivity(), HistoryTransactionsActivity.class);
+                startActivity(menuHistory);
                 break;
         }
     }

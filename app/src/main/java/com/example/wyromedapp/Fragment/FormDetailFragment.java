@@ -50,8 +50,6 @@ public class FormDetailFragment extends Fragment {
 
 
 
-
-
         return view;
     }
 }

@@ -5,6 +5,8 @@ import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -18,7 +20,7 @@ public class BookingActivity extends AppCompatActivity implements View.OnClickLi
 
     StepView stepView;
     FragmentManager fragmentManager;
-    ImageButton back;
+    ImageButton back, myBooking;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +30,7 @@ public class BookingActivity extends AppCompatActivity implements View.OnClickLi
         //INIT VIEW
         stepView = findViewById(R.id.step_view);
         back = findViewById(R.id.ic_back);
+        myBooking = findViewById(R.id.ic_my_booking);
 
         fragmentManager = getSupportFragmentManager();
         FormDetailFragment formDetailFragment = new FormDetailFragment();
@@ -52,13 +55,20 @@ public class BookingActivity extends AppCompatActivity implements View.OnClickLi
 
         //SET LISTENER
         back.setOnClickListener(this);
+        myBooking.setOnClickListener(this);
     }
 
+    @SuppressLint("NonConstantResourceId")
     @Override
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.ic_back:
                 finish();
+                break;
+
+            case R.id.ic_my_booking:
+                Intent mybooking = new Intent(BookingActivity.this, MyBookingActivity.class);
+                startActivity(mybooking);
                 break;
         }
     }
