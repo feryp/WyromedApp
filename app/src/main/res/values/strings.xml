@@ -166,6 +166,10 @@
     <!-- list item history stock item screen -->
     <string name="no_request_stock">No. Request</string>
 
-
+    <!-- notification screen -->
+    <string name="app_bar_notification">Notification</string>
+    <string name="push_notification_notif">Push Notification</string>
+    <string name="email_notif">Email</string>
+    <string name="set_how_you_receive_notifications_on_wyromed">Set how you receive notifications on Wyromed.</string>
 
 </resources>

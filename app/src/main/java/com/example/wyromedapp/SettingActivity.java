@@ -48,6 +48,11 @@ public class SettingActivity extends AppCompatActivity implements View.OnClickLi
                 Intent profile = new Intent(SettingActivity.this, EditProfileActivity.class);
                 startActivity(profile);
                 break;
+
+            case R.id.menu_notification_settings:
+                Intent notification = new Intent(SettingActivity.this, NotificationActivity.class);
+                startActivity(notification);
+                break;
         }
     }
 }
