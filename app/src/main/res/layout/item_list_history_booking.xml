@@ -58,7 +58,7 @@
 
 
             <TextView
-                android:id="@+id/tv_tgl_history_booking"
+                android:id="@+id/tv_date_history_booking"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"

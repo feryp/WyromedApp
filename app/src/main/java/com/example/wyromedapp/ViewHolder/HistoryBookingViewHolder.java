@@ -16,6 +16,6 @@ public class HistoryBookingViewHolder extends RecyclerView.ViewHolder{
     public HistoryBookingViewHolder(@NonNull View itemView) {
         super(itemView);
         tvNoOrder = itemView.findViewById(R.id.tv_no_order_history_booking);
-        tvHistoryBookingDate = itemView.findViewById(R.id.tv_tgl_history_booking);
+        tvHistoryBookingDate = itemView.findViewById(R.id.tv_date_history_booking);
     }
 }
