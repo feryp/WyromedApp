@@ -3,6 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.wyromedapp">
 
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
         android:appComponentFactory="whateverString"
@@ -11,8 +15,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        tools:replace="android:appComponentFactory">
-        <activity android:name=".ChangePasswordActivity"></activity>
+        tools:replace="android:appComponentFactory"
+        tools:targetApi="p"
+        tools:ignore="AllowBackup">
+        <activity android:name=".ConfirmSignatureActivity" />
+        <activity android:name=".ChangePasswordActivity" />
         <activity android:name=".NotificationActivity" />
         <activity android:name=".MyBookingActivity" />
         <activity android:name=".HistoryTransactionsActivity" />

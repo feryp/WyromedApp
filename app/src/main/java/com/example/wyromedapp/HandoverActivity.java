@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -72,6 +73,7 @@ public class HandoverActivity extends AppCompatActivity implements View.OnClickL
         rvOrderPurchased.setHasFixedSize(false);
     }
 
+    @SuppressLint("NonConstantResourceId")
     @Override
     public void onClick(View v) {
         switch (v.getId()){
@@ -79,6 +81,10 @@ public class HandoverActivity extends AppCompatActivity implements View.OnClickL
                 finish();
                 break;
 
+            case R.id.btn_accept_order:
+                Intent accept = new Intent(HandoverActivity.this, ConfirmSignatureActivity.class);
+                startActivity(accept);
+                break;
         }
     }
 }
