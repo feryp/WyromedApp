@@ -172,4 +172,20 @@
     <string name="email_notif">Email</string>
     <string name="set_how_you_receive_notifications_on_wyromed">Set how you receive notifications on Wyromed.</string>
 
+    <!-- edit profile screen -->
+    <string name="upload_foto_profile">Upload</string>
+    <string name="hint_fullname_edit">Fullname</string>
+    <string name="hint_email_edit">Email</string>
+    <string name="hint_no_handphone_edit">No. Handphone</string>
+    <string name="btn_edit_profile">Edit Profile</string>
+
+    <!-- change password screen -->
+    <string name="app_bar_change_password">Change Password</string>
+    <string name="hint_new_password_change">New Password</string>
+    <string name="hint_repeat_password_change">Repeat Password</string>
+    <string name="btn_save_password">Save</string>
+    <string name="title_new_password">New Password</string>
+    <string name="create_a_new_password_for_the_account_with_email">Create a new password for the account with email</string>
+
+
 </resources>

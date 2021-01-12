@@ -2,6 +2,7 @@ package com.example.wyromedapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.method.HideReturnsTransformationMethod;
@@ -56,6 +57,7 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
 
     }
 
+    @SuppressLint("NonConstantResourceId")
     @Override
     public void onClick(View v) {
         switch (v.getId()){

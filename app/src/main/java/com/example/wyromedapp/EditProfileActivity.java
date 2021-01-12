@@ -2,6 +2,7 @@ package com.example.wyromedapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -22,6 +23,7 @@ public class EditProfileActivity extends AppCompatActivity implements View.OnCli
         back.setOnClickListener(this);
     }
 
+    @SuppressLint("NonConstantResourceId")
     @Override
     public void onClick(View v) {
         switch (v.getId()){

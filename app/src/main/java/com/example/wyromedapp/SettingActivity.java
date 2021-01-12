@@ -53,6 +53,11 @@ public class SettingActivity extends AppCompatActivity implements View.OnClickLi
                 Intent notification = new Intent(SettingActivity.this, NotificationActivity.class);
                 startActivity(notification);
                 break;
+
+            case R.id.menu_change_password_settings:
+                Intent changePassword = new Intent(SettingActivity.this, ChangePasswordActivity.class);
+                startActivity(changePassword);
+                break;
         }
     }
 }
