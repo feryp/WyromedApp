@@ -11,10 +11,15 @@ import com.example.wyromedapp.R;
 public class OrderRentalItemViewHolder extends RecyclerView.ViewHolder  {
 
     public TextView tvNamaBarangRental;
+    public TextView tvTitleJumlahBarangRental;
+    public TextView tvJumlahBarangRental;
 
     public OrderRentalItemViewHolder(@NonNull View itemView) {
         super(itemView);
 
         tvNamaBarangRental = itemView.findViewById(R.id.tv_nama_barang_rental_order);
+        tvTitleJumlahBarangRental = itemView.findViewById(R.id.tv_title_amount_qty_rental_order);
+        tvJumlahBarangRental = itemView.findViewById(R.id.tv_amount_qty_rental_order);
+
     }
 }

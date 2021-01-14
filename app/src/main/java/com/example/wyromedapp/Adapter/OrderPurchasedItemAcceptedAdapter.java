@@ -10,34 +10,33 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.wyromedapp.Model.OrderPurchasedItem;
 import com.example.wyromedapp.R;
-import com.example.wyromedapp.ViewHolder.OrderPurchasedItemViewHolder;
+import com.example.wyromedapp.ViewHolder.OrderPurchasedItemAcceptedViewHolder;
 
 import java.util.List;
 
-public class OrderPurchasedItemAdapter extends RecyclerView.Adapter<OrderPurchasedItemViewHolder> {
+class OrderPurchasedItemAcceptedAdapter extends RecyclerView.Adapter<OrderPurchasedItemAcceptedViewHolder> {
 
     private Context context;
     private List<OrderPurchasedItem> orderPurchasedItemList;
 
-    public OrderPurchasedItemAdapter(Context context, List<OrderPurchasedItem> orderPurchasedItemList) {
+    public OrderPurchasedItemAcceptedAdapter(Context context, List<OrderPurchasedItem> orderPurchasedItemList) {
         this.context = context;
         this.orderPurchasedItemList = orderPurchasedItemList;
     }
 
     @NonNull
     @Override
-    public OrderPurchasedItemViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public OrderPurchasedItemAcceptedViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_list_purchased_item,parent,false);
-        return new OrderPurchasedItemViewHolder(view);
+        return new OrderPurchasedItemAcceptedViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull OrderPurchasedItemViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull OrderPurchasedItemAcceptedViewHolder holder, int position) {
         holder.tvNamaBarangBeli.setText(orderPurchasedItemList.get(position).getNamaBarang());
-        holder.tvJumlahBarangBeli.setText(String.valueOf(orderPurchasedItemList.get(position).getJumlahKuantitas()));
 
-        holder.tvTitleJumlahBarangBeli.setVisibility(View.VISIBLE);
-        holder.tvJumlahBarangBeli.setVisibility(View.VISIBLE);
+        holder.tvTitleStatus.setVisibility(View.VISIBLE);
+        holder.tvStatus.setVisibility(View.VISIBLE);
     }
 
     @Override

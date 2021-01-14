@@ -73,7 +73,6 @@ public class ConfirmSignatureActivity extends AppCompatActivity implements View.
         btnSave.setOnClickListener(this);
         btnClear.setOnClickListener(this);
 
-        verifyStoragePermissions(this);
     }
 
 
@@ -86,6 +85,9 @@ public class ConfirmSignatureActivity extends AppCompatActivity implements View.
                 break;
 
             case R.id.btn_save_signature:
+
+
+
                 Bitmap signatureBitmap = signaturePad.getSignatureBitmap();
                 if (addJpgSignatureToGallery(signatureBitmap)){
                     Toast.makeText(ConfirmSignatureActivity.this, "Signature saved into the Gallery", Toast.LENGTH_SHORT).show();

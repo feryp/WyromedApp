@@ -155,13 +155,14 @@
     <string name="order_status_purchased">Order Status</string>
     <string name="title_order_purchased_item">Purchased Item</string>
     <string name="btn_accept_order">Accept</string>
+    <string name="btn_start_operation">Start</string>
 
-    <!-- list item order rental item screen -->
-    <string name="tv_operation">Operation</string>
-    <string name="tv_stopwatch">00:00</string>
+    <!-- list item order rental item screen and  purchased item screen -->
+    <string name="tv_title_amount_qty">Amount</string>
+    <string name="tv_title_status_accepted">Status</string>
+    <string name="tv_title_operation">Operation</string>
+    <string name="tv_countdown">00:00</string>
 
-    <!-- list item order purchased item screen -->
-    <string name="tv_amount_qty">Amount</string>
 
     <!-- list item history stock item screen -->
     <string name="no_request_stock">No. Request</string>
@@ -186,6 +187,7 @@
     <string name="btn_save_password">Save</string>
     <string name="title_new_password">New Password</string>
     <string name="create_a_new_password_for_the_account_with_email">Create a new password for the account with email</string>
+
 
 
 </resources>

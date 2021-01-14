@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
+import com.chinodev.androidneomorphframelayout.NeomorphFrameLayout;
 import com.example.wyromedapp.Adapter.OrderPurchasedItemAdapter;
 import com.example.wyromedapp.Adapter.OrderRentalItemAdapter;
 import com.example.wyromedapp.Model.OrderPurchasedItem;
@@ -23,9 +24,10 @@ public class HandoverActivity extends AppCompatActivity implements View.OnClickL
 
     RecyclerView rvOrderRental, rvOrderPurchased;
     ImageButton back;
-    Button btnAccept;
-    public OrderRentalItemAdapter rentalItemAdapter;
-    public OrderPurchasedItemAdapter purchasedItemAdapter;
+    Button btnAccept, btnStart;
+    NeomorphFrameLayout layoutBtnAccept, layoutBtnStart;
+    OrderRentalItemAdapter rentalItemAdapter;
+    OrderPurchasedItemAdapter purchasedItemAdapter;
     List<OrderRentalItem> orderRentalItemList;
     List<OrderPurchasedItem> orderPurchasedItemList;
 
@@ -39,17 +41,25 @@ public class HandoverActivity extends AppCompatActivity implements View.OnClickL
         rvOrderRental = findViewById(R.id.rv_order_rental_item);
         rvOrderPurchased = findViewById(R.id.rv_order_purchased_item);
         btnAccept = findViewById(R.id.btn_accept_order);
+        btnStart = findViewById(R.id.btn_start_operation);
+        layoutBtnAccept = findViewById(R.id.layout_btn_accept);
+        layoutBtnStart = findViewById(R.id.layout_btn_start);
 
         //SET LISTENER
         back.setOnClickListener(this);
         btnAccept.setOnClickListener(this);
+        btnStart.setOnClickListener(this);
+
+        //Visibity Button
+        layoutBtnAccept.setVisibility(View.VISIBLE);
+        layoutBtnStart.setVisibility(View.INVISIBLE);
 
         //List Rental Item
         orderRentalItemList = new ArrayList<>();
-        orderRentalItemList.add(new OrderRentalItem("Phillips VT-1208LL"));
-        orderRentalItemList.add(new OrderRentalItem("Siemens TH-45TR"));
-        orderRentalItemList.add(new OrderRentalItem("Panasonic AR-1202RL"));
-        orderRentalItemList.add(new OrderRentalItem("LG DF-2401PO"));
+        orderRentalItemList.add(new OrderRentalItem("Phillips VT-1208LL",1));
+        orderRentalItemList.add(new OrderRentalItem("Siemens TH-45TR",1));
+        orderRentalItemList.add(new OrderRentalItem("Panasonic AR-1202RL",1));
+        orderRentalItemList.add(new OrderRentalItem("LG DF-2401PO",1));
 
         //List Purchased Item
         orderPurchasedItemList = new ArrayList<>();
@@ -82,9 +92,17 @@ public class HandoverActivity extends AppCompatActivity implements View.OnClickL
                 break;
 
             case R.id.btn_accept_order:
-                Intent accept = new Intent(HandoverActivity.this, ConfirmSignatureActivity.class);
-                startActivity(accept);
+
+                //ini cuman buat trigger sementara buat masuk ke tampilan selanjutnya,
+                // karena gua males bikin fungsi nya jadi fungsinya biar ke konek langsung aja sama api
+                Intent intent = new Intent(HandoverActivity.this, InUseActivity.class);
+                startActivity(intent);
                 break;
+
+                //Intent yg bener yg dibawah ini
+//                Intent accept = new Intent(HandoverActivity.this, ConfirmSignatureActivity.class);
+//                startActivity(accept);
+//                break;
         }
     }
 }
