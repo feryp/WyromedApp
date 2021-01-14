@@ -188,6 +188,16 @@
     <string name="title_new_password">New Password</string>
     <string name="create_a_new_password_for_the_account_with_email">Create a new password for the account with email</string>
 
+    <!-- in use screen -->
+    <string name="app_bar_in_use">In Use</string>
+    <string name="btn_finish">Finish</string>
 
+    <!-- finishing screen -->
+    <string name="app_bar_finishing">Finishing</string>
+    <string name="btn_submit_sales">Submit</string>
+
+    <!-- receipt screen -->
+    <string name="app_bar_receipt">Receipt</string>
+    <string name="btn_create">Create</string>
 
 </resources>

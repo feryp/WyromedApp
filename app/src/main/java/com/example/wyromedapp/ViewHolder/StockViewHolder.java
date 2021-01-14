@@ -1,12 +1,13 @@
 package com.example.wyromedapp.ViewHolder;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.widget.AppCompatImageButton;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.wyromedapp.Interface.ItemClickListener;
@@ -18,8 +19,8 @@ public class StockViewHolder extends RecyclerView.ViewHolder implements View.OnC
     public TextView tvJumlahInventory;
     public TextView tvSatuan;
     public TextView tvKuantitas;
-    public AppCompatImageButton minus;
-    public AppCompatImageButton plus;
+    public ImageButton minus;
+    public ImageButton plus;
 
     SharedPreferences sharedPref;
 
@@ -40,6 +41,7 @@ public class StockViewHolder extends RecyclerView.ViewHolder implements View.OnC
         tvKuantitas.setText("0");
     }
 
+    @SuppressLint("NonConstantResourceId")
     @Override
     public void onClick(View v) {
 

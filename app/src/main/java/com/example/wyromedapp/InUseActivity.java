@@ -5,13 +5,14 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
-import com.example.wyromedapp.Adapter.InUsePurchasedItemAdapter;
-import com.example.wyromedapp.Adapter.InUseRentalItemAdapter;
+import com.example.wyromedapp.Adapter.InUsePurchasedAdapter;
+import com.example.wyromedapp.Adapter.InUseRentalAdapter;
 import com.example.wyromedapp.Model.InUseItem;
 
 import java.util.ArrayList;
@@ -22,8 +23,8 @@ public class InUseActivity extends AppCompatActivity implements View.OnClickList
     RecyclerView rvOrderRental, rvOrderPurchased;
     ImageButton back;
     Button btnFinish;
-    InUseRentalItemAdapter inUseRentalItemAdapter;
-    InUsePurchasedItemAdapter inUsePurchasedItemAdapter;
+    InUseRentalAdapter inUseRentalAdapter;
+    InUsePurchasedAdapter inUsePurchasedAdapter;
     List<InUseItem> inUseItemRental, inUseItemPurchased;
 
     @Override
@@ -57,15 +58,15 @@ public class InUseActivity extends AppCompatActivity implements View.OnClickList
 
 
         //Setup adapter rental
-        inUseRentalItemAdapter = new InUseRentalItemAdapter(this, inUseItemRental);
+        inUseRentalAdapter = new InUseRentalAdapter(this, inUseItemRental);
         rvOrderRental.setLayoutManager(new LinearLayoutManager(this));
-        rvOrderRental.setAdapter(inUseRentalItemAdapter);
+        rvOrderRental.setAdapter(inUseRentalAdapter);
         rvOrderRental.setHasFixedSize(false);
 
         //Setup adapter purchased
-        inUsePurchasedItemAdapter = new InUsePurchasedItemAdapter(this, inUseItemPurchased);
+        inUsePurchasedAdapter = new InUsePurchasedAdapter(this, inUseItemPurchased);
         rvOrderPurchased.setLayoutManager(new LinearLayoutManager(this));
-        rvOrderPurchased.setAdapter(inUsePurchasedItemAdapter);
+        rvOrderPurchased.setAdapter(inUsePurchasedAdapter);
         rvOrderPurchased.setHasFixedSize(false);
 
     }
@@ -76,6 +77,11 @@ public class InUseActivity extends AppCompatActivity implements View.OnClickList
         switch (v.getId()){
             case R.id.ic_back:
                 finish();
+                break;
+
+            case R.id.btn_finish_operation:
+                Intent finish = new Intent(InUseActivity.this, FinishOperationActivity.class);
+                startActivity(finish);
                 break;
         }
     }

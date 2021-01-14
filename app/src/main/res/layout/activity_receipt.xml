@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".InUseActivity">
+    tools:context=".ReceiptActivity">
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
@@ -41,7 +41,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerInParent="true"
-                        android:text="@string/app_bar_in_use"
+                        android:text="@string/app_bar_receipt"
                         android:textColor="@color/white"
                         android:textSize="20sp"
                         android:fontFamily="@font/montserrat_regular"
@@ -92,7 +92,7 @@
                         android:fontFamily="@font/montserrat_regular"/>
 
                     <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/rv_order_rental_operation"
+                        android:id="@+id/rv_order_rental_receipt"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginTop="20dp" />
@@ -128,7 +128,7 @@
                         android:textSize="14sp" />
 
                     <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/rv_order_purchased_operation"
+                        android:id="@+id/rv_order_purchased_receipt"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginTop="20dp"/>
@@ -142,7 +142,7 @@
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
     <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
-        android:id="@+id/layout_btn_finish"
+        android:id="@+id/layout_btn_crate_so"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -161,7 +161,7 @@
         tools:ignore="MissingConstraints">
 
         <Button
-            android:id="@+id/btn_finish_operation"
+            android:id="@+id/btn_create_so"
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:background="@drawable/bg_button_circle_green"
@@ -169,7 +169,7 @@
             android:focusable="true"
             android:fontFamily="@font/montserrat_regular"
             android:foreground="?android:attr/selectableItemBackground"
-            android:text="@string/btn_finish"
+            android:text="@string/btn_create"
             android:textAllCaps="false"
             android:textColor="@color/white"
             android:textSize="18sp" />
