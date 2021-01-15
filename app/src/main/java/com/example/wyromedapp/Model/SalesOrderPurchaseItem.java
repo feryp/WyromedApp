@@ -1,12 +1,12 @@
 package com.example.wyromedapp.Model;
 
-public class DetailSalesPurchaseItem {
+public class SalesOrderPurchaseItem {
     private String namaBarang;
     private String hargaBarang;
     private int kuantitasBarang;
     private String totalHarga;
 
-    public DetailSalesPurchaseItem(String namaBarang, String hargaBarang, int kuantitasBarang, String totalHarga) {
+    public SalesOrderPurchaseItem(String namaBarang, String hargaBarang, int kuantitasBarang, String totalHarga) {
         this.namaBarang = namaBarang;
         this.hargaBarang = hargaBarang;
         this.kuantitasBarang = kuantitasBarang;

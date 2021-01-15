@@ -17,8 +17,8 @@ import java.util.List;
 
 public class InUseRentalAdapter extends RecyclerView.Adapter<InUseRentalViewHolder> {
 
-    private Context context;
-    private List<InUseItem> inUseItemList;
+    private final Context context;
+    private final List<InUseItem> inUseItemList;
 
     public InUseRentalAdapter(Context context, List<InUseItem> inUseItemList) {
         this.context = context;

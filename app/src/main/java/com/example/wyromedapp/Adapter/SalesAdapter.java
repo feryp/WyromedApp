@@ -19,8 +19,8 @@ import java.util.List;
 
 public class SalesAdapter extends RecyclerView.Adapter<SalesViewHolder> {
 
-    private Context context;
-    private List<Sales> salesList;
+    private final Context context;
+    private final List<Sales> salesList;
 
     public SalesAdapter(Context context, List<Sales> salesList) {
         this.context = context;

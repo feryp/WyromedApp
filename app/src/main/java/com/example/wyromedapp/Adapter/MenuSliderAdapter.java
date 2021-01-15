@@ -21,7 +21,7 @@ import java.util.List;
 
 public class MenuSliderAdapter extends PagerAdapter {
 
-    private List<MenuSliderModel> models;
+    private final List<MenuSliderModel> models;
 //    private ViewPager2 viewPager2;
     Context context;
 

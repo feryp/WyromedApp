@@ -10,29 +10,29 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.wyromedapp.Model.SalesOrderRentItem;
 import com.example.wyromedapp.R;
-import com.example.wyromedapp.ViewHolder.DetailSalesRentItemViewHolder;
+import com.example.wyromedapp.ViewHolder.SalesOrderRentItemViewHolder;
 
 import java.util.List;
 
-public class DetailSalesRentItemAdapter extends RecyclerView.Adapter<DetailSalesRentItemViewHolder> {
+public class SalesOrderRentItemAdapter extends RecyclerView.Adapter<SalesOrderRentItemViewHolder> {
 
     private final Context context;
     private final List<SalesOrderRentItem> salesRentItemList;
 
-    public DetailSalesRentItemAdapter(Context context, List<SalesOrderRentItem> salesRentItemList) {
+    public SalesOrderRentItemAdapter(Context context, List<SalesOrderRentItem> salesRentItemList) {
         this.context = context;
         this.salesRentItemList = salesRentItemList;
     }
 
     @NonNull
     @Override
-    public DetailSalesRentItemViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public SalesOrderRentItemViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(context).inflate(R.layout.item_list_detail_sales_item,parent,false);
-        return new DetailSalesRentItemViewHolder(view);
+        return new SalesOrderRentItemViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull DetailSalesRentItemViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull SalesOrderRentItemViewHolder holder, int position) {
         holder.namaBarang.setText(salesRentItemList.get(position).getNamaBarang());
         holder.hargaBarang.setText(salesRentItemList.get(position).getHargaBarang());
         holder.kuantitasBarang.setText(String.valueOf(salesRentItemList.get(position).getKuantitasBarang()));

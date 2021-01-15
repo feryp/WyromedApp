@@ -16,8 +16,8 @@ import java.util.List;
 
 public class PenguranganRequestAdapter extends RecyclerView.Adapter<PenguranganRequestViewHolder> {
 
-    private Context context;
-    private List<StockRequest> stockRequestList;
+    private final Context context;
+    private final List<StockRequest> stockRequestList;
 
     public PenguranganRequestAdapter(Context context, List<StockRequest> stockRequestList) {
         this.context = context;

@@ -16,8 +16,8 @@ import java.util.List;
 
 public class HistorySalesAdapter extends RecyclerView.Adapter<HistorySalesViewHolder> {
 
-    private Context context;
-    private List<HistorySales> historySalesList;
+    private final Context context;
+    private final List<HistorySales> historySalesList;
 
     public HistorySalesAdapter(Context context, List<HistorySales> historySalesList) {
         this.context = context;

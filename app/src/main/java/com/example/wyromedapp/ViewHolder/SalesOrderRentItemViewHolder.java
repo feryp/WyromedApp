@@ -8,11 +8,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.wyromedapp.R;
 
-public class DetailSalesRentItemViewHolder extends RecyclerView.ViewHolder {
+public class SalesOrderRentItemViewHolder extends RecyclerView.ViewHolder{
 
     public TextView namaBarang, hargaBarang, kuantitasBarang, totalHarga;
 
-    public DetailSalesRentItemViewHolder(@NonNull View itemView) {
+    public SalesOrderRentItemViewHolder(@NonNull View itemView) {
         super(itemView);
 
         namaBarang = itemView.findViewById(R.id.tv_sales_item_name);

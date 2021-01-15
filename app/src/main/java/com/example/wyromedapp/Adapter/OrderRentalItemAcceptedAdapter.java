@@ -17,8 +17,8 @@ import java.util.List;
 
 public class OrderRentalItemAcceptedAdapter extends RecyclerView.Adapter<OrderRentalItemAcceptedViewHolder> {
 
-    private Context context;
-    private List<OrderRentalItem> orderRentalItemList;
+    private final Context context;
+    private final List<OrderRentalItem> orderRentalItemList;
 
     public OrderRentalItemAcceptedAdapter(Context context, List<OrderRentalItem> orderRentalItemList) {
         this.context = context;

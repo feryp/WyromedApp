@@ -1,5 +1,6 @@
 package com.example.wyromedapp.Adapter;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,10 +19,9 @@ import java.util.List;
 
 public class ViewAnimAdapter extends PagerAdapter {
 
-    private LayoutInflater layoutInflater;
-    private Context context;
+    private final Context context;
     private Integer [] anim = {R.raw.slider_1, R.raw.slider_2, R.raw.slider_3};
-    private List<String> text;
+    private final List<String> text;
 
     public ViewAnimAdapter(Context context, Integer[] anim, List<String> text) {
         this.context = context;
@@ -42,8 +42,9 @@ public class ViewAnimAdapter extends PagerAdapter {
     @NonNull
     @Override
     public Object instantiateItem(@NonNull ViewGroup container, int position) {
-        layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View view = layoutInflater.inflate(R.layout.anim_slider, null);
+        LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        assert layoutInflater != null;
+        @SuppressLint("InflateParams") View view = layoutInflater.inflate(R.layout.anim_slider, null);
         LottieAnimationView lottieAnimationView = (LottieAnimationView) view.findViewById(R.id.anim_lottie);
         TextView textView = (TextView) view.findViewById(R.id.text_view_anim);
         lottieAnimationView.setAnimation(anim[position]);

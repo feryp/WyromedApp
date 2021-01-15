@@ -16,8 +16,8 @@ import java.util.List;
 
 public class InUsePurchasedAdapter extends RecyclerView.Adapter<InUsePurchasedViewHolder> {
 
-    private Context context;
-    private List<InUseItem> inUseItemList;
+    private final Context context;
+    private final List<InUseItem> inUseItemList;
 
     public InUsePurchasedAdapter(Context context, List<InUseItem> inUseItemList) {
         this.context = context;

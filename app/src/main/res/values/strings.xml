@@ -148,6 +148,20 @@
     <string name="app_bar_sales">Sales</string>
     <string name="no_order_sales">No. Sales</string>
 
+    <!-- detail sales screen -->
+    <string name="app_bar_detail_sales">Detail Sales</string>
+    <string name="title_detail_sales">Detail Sales</string>
+    <string name="date_detail_sales">Date</string>
+    <string name="hospital_detail_sales">Hospital</string>
+    <string name="patient_name_detail_sales">Patient Name</string>
+    <string name="medical_record_detail_sales">Medical Record</string>
+    <string name="payment_status_detail_sales">Payment Status</string>
+    <string name="payment_method_detail_sales">Payment Method</string>
+    <string name="title_rental_item_detail_sales">Rental Item</string>
+    <string name="title_purchased_item_detail_sales">Purchased Item</string>
+    <string name="title_total_price_detail_sales">Total Price</string>
+
+
     <!-- handover screen -->
     <string name="app_bar_handover">Handover</string>
     <string name="order_status_rental">Order Status</string>
@@ -199,5 +213,16 @@
     <!-- receipt screen -->
     <string name="app_bar_receipt">Receipt</string>
     <string name="btn_create">Create</string>
+
+    <!-- sales order screen -->
+    <string name="app_bar_sales_order">Sales Order</string>
+    <string name="payment_status_sales_order">Payment Status</string>
+    <string name="payment_method_sales_order">Payment Method</string>
+    <string name="due_date_sales_order">Due Date</string>
+    <string name="hint_select_payment_method">-Select-</string>
+    <string name="hint_select_due_date">-Select-</string>
+    <string name="btn_finish_so">Finish</string>
+    <string name="btn_send_so">Send</string>
+
 
 </resources>

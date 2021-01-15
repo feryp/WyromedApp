@@ -17,8 +17,8 @@ import java.util.List;
 
 public class FinishPurchasedAdapter extends RecyclerView.Adapter<FinishPurchasedViewHolder> {
 
-    private Context context;
-    private List<FinishPurchaseItem> finishPurchaseItemList;
+    private final Context context;
+    private final List<FinishPurchaseItem> finishPurchaseItemList;
 
     public FinishPurchasedAdapter(Context context, List<FinishPurchaseItem> finishPurchaseItemList) {
         this.context = context;

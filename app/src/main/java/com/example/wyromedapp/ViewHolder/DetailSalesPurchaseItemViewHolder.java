@@ -15,9 +15,9 @@ public class DetailSalesPurchaseItemViewHolder extends RecyclerView.ViewHolder {
     public DetailSalesPurchaseItemViewHolder(@NonNull View itemView) {
         super(itemView);
 
-        namaBarang = itemView.findViewById(R.id.tv_detail_sales_item_name);
-        hargaBarang = itemView.findViewById(R.id.tv_detail_sales_item_price);
-        kuantitasBarang = itemView.findViewById(R.id.tv_detail_sales_kuantitas_item);
-        totalHarga = itemView.findViewById(R.id.tv_detail_sales_total_price_item);
+        namaBarang = itemView.findViewById(R.id.tv_sales_item_name);
+        hargaBarang = itemView.findViewById(R.id.tv_sales_item_price);
+        kuantitasBarang = itemView.findViewById(R.id.tv_sales_kuantitas_item);
+        totalHarga = itemView.findViewById(R.id.tv_sales_total_price_item);
     }
 }

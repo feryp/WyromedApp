@@ -16,8 +16,8 @@ import java.util.List;
 
 public class HistoryBookingAdapter extends RecyclerView.Adapter<HistoryBookingViewHolder> {
 
-    private Context context;
-    private List<HistoryBooking> historyBookingList;
+    private final Context context;
+    private final List<HistoryBooking> historyBookingList;
 
     public HistoryBookingAdapter(Context context, List<HistoryBooking> historyBookingList) {
         this.context = context;

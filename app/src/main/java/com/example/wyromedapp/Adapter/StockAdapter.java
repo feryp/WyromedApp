@@ -18,8 +18,8 @@ import java.util.List;
 
 public class StockAdapter extends RecyclerView.Adapter<StockViewHolder> {
 
-    private Context context;
-    private List<Stock> stockList;
+    private final Context context;
+    private final List<Stock> stockList;
 
     public StockAdapter(Context context, List<Stock> stockList) {
         this.context = context;

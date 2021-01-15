@@ -16,8 +16,8 @@ import java.util.List;
 
 public class FinishRentalAdapter extends RecyclerView.Adapter<FinishRentalViewHolder> {
 
-    private Context context;
-    private List<FinishRentalItem> finishRentalItemList;
+    private final Context context;
+    private final List<FinishRentalItem> finishRentalItemList;
 
     public FinishRentalAdapter(Context context, List<FinishRentalItem> finishRentalItemList) {
         this.context = context;

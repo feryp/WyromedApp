@@ -16,8 +16,8 @@ import java.util.List;
 
 public class MyBookingAdapter extends RecyclerView.Adapter<MyBookingViewHolder> {
 
-    private Context context;
-    private List<MyBooking> myBookingList;
+    private final Context context;
+    private final List<MyBooking> myBookingList;
 
     public MyBookingAdapter(Context context, List<MyBooking> myBookingList) {
         this.context = context;

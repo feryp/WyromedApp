@@ -16,8 +16,8 @@ import java.util.List;
 
 public class PenambahanRequestAdapter extends RecyclerView.Adapter<PenambahanRequestViewHolder> {
 
-    private Context context;
-    private List<StockRequest> stockRequestList;
+    private final Context context;
+    private final List<StockRequest> stockRequestList;
 
     public PenambahanRequestAdapter(Context context, List<StockRequest> stockRequestList) {
         this.context = context;

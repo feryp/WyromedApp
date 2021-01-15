@@ -21,8 +21,8 @@ import java.util.List;
 
 public class ListMessageAdapter extends RecyclerView.Adapter<ListMessageViewHolder> {
 
-    private Context mContext;
-    private List<ListMessage> mListMessage;
+    private final Context mContext;
+    private final List<ListMessage> mListMessage;
 
     public ListMessageAdapter(Context mContext, List<ListMessage> mListMessage) {
         this.mContext = mContext;
