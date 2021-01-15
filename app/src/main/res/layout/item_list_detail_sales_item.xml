@@ -28,6 +28,9 @@
         android:textColor="@color/colorGrey"
         android:fontFamily="@font/montserrat_regular"
         android:textSize="12sp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
         app:layout_constraintTop_toBottomOf="@+id/tv_sales_item_name"
         tools:ignore="MissingConstraints" />
 

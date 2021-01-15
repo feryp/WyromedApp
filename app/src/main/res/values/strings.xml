@@ -224,5 +224,16 @@
     <string name="btn_finish_so">Finish</string>
     <string name="btn_send_so">Send</string>
 
+    <!-- bottom sheet bar payment method -->
+    <string name="title_select_payment_method">Select Payment Method</string>
+    <string name="rd_cash">Cash</string>
+    <string name="rd_credit">Credit</string>
+    <string name="btn_choose_payment">Choose</string>
+
+    <!-- bottom sheet bar edit price -->
+    <string name="et_hint_price">Price</string>
+    <string name="btn_save_new_price">Save</string>
+    <string name="title_edit_price_item">Edit Price Item</string>
+
 
 </resources>

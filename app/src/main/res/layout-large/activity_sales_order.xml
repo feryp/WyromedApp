@@ -338,9 +338,10 @@
                     android:id="@+id/tv_sales_order_due_date"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_toStartOf="@+id/btn_open_calendar"
+                    android:layout_toStartOf="@+id/btn_open_calendar_due_date"
                     android:layout_centerVertical="true"
                     android:layout_marginTop="18dp"
+                    android:layout_marginEnd="10dp"
                     android:fontFamily="@font/montserrat_regular"
                     android:text="@string/hint_select_due_date"
                     android:textColor="@color/colorGray"
@@ -348,7 +349,7 @@
                     tools:ignore="MissingConstraints" />
 
                 <ImageButton
-                    android:id="@+id/btn_open_calendar"
+                    android:id="@+id/btn_open_calendar_due_date"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/ic_date"
@@ -561,6 +562,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="56dp"
                         android:background="@drawable/bg_button_circle_white"
+                        app:backgroundTint="@null"
                         android:clickable="true"
                         android:focusable="true"
                         android:fontFamily="@font/montserrat_regular"

@@ -34,6 +34,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:tabBackground="@drawable/indicator_selector"
+            app:backgroundTint="@null"
+            android:background="@color/colorBackground"
             app:tabGravity="center"
             app:tabIndicatorHeight="0dp" />
 
@@ -107,6 +109,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:background="@drawable/bg_button_rounded_white"
+                app:backgroundTint="@null"
                 android:clickable="true"
                 android:focusable="true"
                 android:fontFamily="@font/montserrat_regular"

@@ -37,6 +37,8 @@ public class SalesOrderRentItemAdapter extends RecyclerView.Adapter<SalesOrderRe
         holder.hargaBarang.setText(salesRentItemList.get(position).getHargaBarang());
         holder.kuantitasBarang.setText(String.valueOf(salesRentItemList.get(position).getKuantitasBarang()));
         holder.totalHarga.setText(salesRentItemList.get(position).getTotalHarga());
+
+
     }
 
     @Override
