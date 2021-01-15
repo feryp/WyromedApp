@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -159,6 +160,11 @@ public class SalesOrderActivity extends AppCompatActivity implements View.OnClic
                         tvSelectedDueDate.setText(date);
                     }
                 });
+                break;
+
+            case R.id.btn_finish_so:
+                Intent finishSO = new Intent(SalesOrderActivity.this, AcceptSignatureActivity.class);
+                startActivity(finishSO);
                 break;
         }
     }

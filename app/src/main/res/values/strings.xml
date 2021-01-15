@@ -235,5 +235,15 @@
     <string name="btn_save_new_price">Save</string>
     <string name="title_edit_price_item">Edit Price Item</string>
 
+    <!-- accept signature screen -->
+    <string name="app_bar_accept">Accept Signature</string>
+    <string name="btn_accept_signature">Accept</string>
+    <string name="title_doctor_signature">Doctor Signature</string>
+    <string name="ask_the_doctor_to_sign_to_confirm_the_handover_of_item">Ask the doctor to sign to confirm the handover of item</string>
+    <string name="title_nurse_chief_signature">Nurse Chief Signature</string>
+    <string name="ask_the_nurse_chief_to_sign_to_confirm_the_handover_of_item">Ask the nurse chief to sign to confirm the handover of item</string>
+    <string name="title_salesman_signature">Salesman Signature</string>
+    <string name="ask_the_salesman_to_sign_to_confirm_the_handover_of_item">Ask the salesman to sign to confirm the handover of item</string>
+
 
 </resources>
