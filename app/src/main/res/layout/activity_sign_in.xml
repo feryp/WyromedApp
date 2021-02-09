@@ -8,21 +8,18 @@
     android:background="@color/colorBackground"
     tools:context=".SignInActivity">
 
-    <RelativeLayout
-        android:id="@+id/relativeLayout"
-        android:layout_width="match_parent"
-        android:layout_height="180dp"
-        android:padding="10dp"
-        tools:ignore="MissingConstraints">
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:contentDescription="@string/todo"
-            android:padding="8dp"
-            android:src="@drawable/tv_sign_in" />
-
-    </RelativeLayout>
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:contentDescription="@string/todo"
+        android:padding="40dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/logo_horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraint_layout_form"
@@ -32,14 +29,13 @@
         app:layout_constraintBottom_toTopOf="@+id/layout_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
+        app:layout_constraintTop_toBottomOf="@+id/logo"
         tools:ignore="MissingConstraints">
 
         <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
             android:id="@+id/neomorph_layout_username"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
