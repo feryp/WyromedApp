@@ -8,16 +8,14 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.wyromedapp.R;
 
-public class InUsePurchasedViewHolder extends RecyclerView.ViewHolder{
+public class OperationPurchasedViewHolder extends RecyclerView.ViewHolder{
 
     public TextView tvNamaBarangPurchased;
-    public TextView tvTitleOperation;
-    public TextView tvCountTimer;
+    public TextView tvJumlahKuntitas;
 
-    public InUsePurchasedViewHolder(@NonNull View itemView) {
+    public OperationPurchasedViewHolder(@NonNull View itemView) {
         super(itemView);
         tvNamaBarangPurchased = itemView.findViewById(R.id.tv_nama_barang_purchased_order);
-        tvTitleOperation = itemView.findViewById(R.id.tv_title_operation_purchased_order);
-        tvCountTimer = itemView.findViewById(R.id.tv_stopwatch_purchased_order);
+        tvJumlahKuntitas = itemView.findViewById(R.id.tv_amount_qty_purchased_order);
     }
 }

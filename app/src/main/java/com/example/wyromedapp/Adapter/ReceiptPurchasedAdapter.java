@@ -9,7 +9,6 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.wyromedapp.Model.OrderPurchasedItem;
-import com.example.wyromedapp.Model.ReceiptOrderPurchased;
 import com.example.wyromedapp.R;
 import com.example.wyromedapp.ViewHolder.ReceiptPurchasedViewHolder;
 
@@ -18,9 +17,9 @@ import java.util.List;
 public class ReceiptPurchasedAdapter extends RecyclerView.Adapter<ReceiptPurchasedViewHolder> {
 
     private final Context context;
-    private final List<ReceiptOrderPurchased> orderPurchasedList;
+    private final List<OrderPurchasedItem> orderPurchasedList;
 
-    public ReceiptPurchasedAdapter(Context context, List<ReceiptOrderPurchased> orderPurchasedList) {
+    public ReceiptPurchasedAdapter(Context context, List<OrderPurchasedItem> orderPurchasedList) {
         this.context = context;
         this.orderPurchasedList = orderPurchasedList;
     }
@@ -35,10 +34,8 @@ public class ReceiptPurchasedAdapter extends RecyclerView.Adapter<ReceiptPurchas
     @Override
     public void onBindViewHolder(@NonNull ReceiptPurchasedViewHolder holder, int position) {
         holder.tvNamaBarangBeli.setText(orderPurchasedList.get(position).getNamaBarang());
-        holder.tvJumlahBarangDipakai.setText(String.valueOf(orderPurchasedList.get(position).getJumlahBarangDipakai()));
+        holder.tvJumlahBarangDipakai.setText(String.valueOf(orderPurchasedList.get(position).getJumlahKuantitas()));
 
-        holder.tvTitleJumlahBarangDipakai.setVisibility(View.VISIBLE);
-        holder.tvJumlahBarangDipakai.setVisibility(View.VISIBLE);
     }
 
     @Override

@@ -10,34 +10,31 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.wyromedapp.Model.OrderRentalItem;
 import com.example.wyromedapp.R;
-import com.example.wyromedapp.ViewHolder.OrderRentalItemViewHolder;
+import com.example.wyromedapp.ViewHolder.ConfirmRentalItemViewHolder;
 
 import java.util.List;
 
-public class OrderRentalItemAdapter extends RecyclerView.Adapter<OrderRentalItemViewHolder> {
+public class ConfirmRentalItemAdapter extends RecyclerView.Adapter<ConfirmRentalItemViewHolder> {
 
     private final Context context;
     private final List<OrderRentalItem> orderRentalItemList;
 
-    public OrderRentalItemAdapter(Context context, List<OrderRentalItem> orderRentalItemList) {
+    public ConfirmRentalItemAdapter(Context context, List<OrderRentalItem> orderRentalItemList) {
         this.context = context;
         this.orderRentalItemList = orderRentalItemList;
     }
 
     @NonNull
     @Override
-    public OrderRentalItemViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ConfirmRentalItemViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_list_rental_item,parent,false);
-        return new OrderRentalItemViewHolder(v);
+        return new ConfirmRentalItemViewHolder(v);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull OrderRentalItemViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ConfirmRentalItemViewHolder holder, int position) {
         holder.tvNamaBarangRental.setText(orderRentalItemList.get(position).getNamaBarang());
-        holder.tvJumlahBarangRental.setText(String.valueOf(orderRentalItemList.get(position).getJumlahKuantitas()));
-
-        holder.tvTitleJumlahBarangRental.setVisibility(View.VISIBLE);
-        holder.tvJumlahBarangRental.setVisibility(View.VISIBLE);
+        holder.tvStatusConfirmRental.setText(orderRentalItemList.get(position).getStatus());
     }
 
     @Override

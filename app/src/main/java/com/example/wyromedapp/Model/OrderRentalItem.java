@@ -2,11 +2,11 @@ package com.example.wyromedapp.Model;
 
 public class OrderRentalItem {
     private String namaBarang;
-    private int jumlahKuantitas;
+    private String status;
 
-    public OrderRentalItem(String namaBarang, int jumlahKuantitas) {
+    public OrderRentalItem(String namaBarang, String status) {
         this.namaBarang = namaBarang;
-        this.jumlahKuantitas = jumlahKuantitas;
+        this.status = status;
     }
 
     public String getNamaBarang() {
@@ -17,11 +17,12 @@ public class OrderRentalItem {
         this.namaBarang = namaBarang;
     }
 
-    public int getJumlahKuantitas() {
-        return jumlahKuantitas;
+    public String getStatus() {
+        return status;
     }
 
-    public void setJumlahKuantitas(int jumlahKuantitas) {
-        this.jumlahKuantitas = jumlahKuantitas;
+    public void setStatus(String status) {
+        this.status = status;
     }
+
 }

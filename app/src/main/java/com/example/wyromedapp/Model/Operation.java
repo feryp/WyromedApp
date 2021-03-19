@@ -1,10 +1,10 @@
 package com.example.wyromedapp.Model;
 
-public class InUseItem {
+public class Operation {
     private String namaBarang;
     private String countTimer;
 
-    public InUseItem(String namaBarang, String countTimer) {
+    public Operation(String namaBarang, String countTimer) {
         this.namaBarang = namaBarang;
         this.countTimer = countTimer;
     }

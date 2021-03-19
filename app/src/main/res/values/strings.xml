@@ -162,12 +162,11 @@
     <string name="title_total_price_detail_sales">Total Price</string>
 
 
-    <!-- handover screen -->
-    <string name="app_bar_handover">Handover</string>
+    <!-- confirm screen -->
+    <string name="app_bar_handover">Confirmation</string>
     <string name="order_status_rental">Order Status</string>
     <string name="title_order_rental_item">Rental Item</string>
     <string name="order_status_purchased">Order Status</string>
-    <string name="title_order_purchased_item">Purchased Item</string>
     <string name="btn_accept_order">Accept</string>
     <string name="btn_start_operation">Start</string>
 
@@ -203,11 +202,12 @@
     <string name="create_a_new_password_for_the_account_with_email">Create a new password for the account with email</string>
 
     <!-- in use screen -->
-    <string name="app_bar_in_use">In Use</string>
+    <string name="app_bar_in_use">Operation</string>
     <string name="btn_finish">Finish</string>
 
     <!-- finishing screen -->
     <string name="app_bar_finishing">Finishing</string>
+    <string name="title_order_purchased_item">Purchased Item</string>
     <string name="btn_submit_sales">Submit</string>
 
     <!-- receipt screen -->

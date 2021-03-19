@@ -36,7 +36,7 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <TextView
-                    android:id="@+id/tv_nama_barang_purchased_order"
+                    android:id="@+id/tv_nama_barang_rental_order"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:maxLines="3"
@@ -56,13 +56,14 @@
                     android:textColor="@color/colorGrey"
                     android:textSize="12sp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_nama_barang_purchased_order" />
+                    app:layout_constraintTop_toBottomOf="@+id/tv_nama_barang_rental_order" />
 
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_count_operation_rental_order"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="16dp"
@@ -71,28 +72,27 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <TextView
-                    android:id="@+id/tv_title_amount_qty_purchased_order"
+                    android:id="@+id/tv_title_operation_rental_order"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/montserrat_regular"
-                    android:text="@string/tv_title_amount_qty"
+                    android:text="@string/tv_title_operation"
                     android:textColor="@color/colorGrey"
                     android:textSize="12sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent" />
 
                 <TextView
-                    android:id="@+id/tv_amount_qty_purchased_order"
+                    android:id="@+id/tv_stopwatch_rental_order"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/montserrat_regular"
-                    tools:text="2"
-                    android:textColor="@color/colorGray"
-                    android:textSize="24sp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="@string/tv_countdown"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_title_amount_qty_purchased_order" />
-
+                    app:layout_constraintTop_toBottomOf="@+id/tv_title_operation_rental_order" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

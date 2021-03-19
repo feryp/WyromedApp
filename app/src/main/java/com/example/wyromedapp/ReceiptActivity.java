@@ -11,12 +11,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
-import com.example.wyromedapp.Adapter.FinishRentalAdapter;
 import com.example.wyromedapp.Adapter.ReceiptPurchasedAdapter;
 import com.example.wyromedapp.Adapter.ReceiptRentalAdapter;
 import com.example.wyromedapp.Model.FinishRentalItem;
 import com.example.wyromedapp.Model.OrderPurchasedItem;
-import com.example.wyromedapp.Model.ReceiptOrderPurchased;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,7 +27,7 @@ public class ReceiptActivity extends AppCompatActivity implements View.OnClickLi
     ReceiptRentalAdapter receiptRentalAdapter;
     ReceiptPurchasedAdapter receiptPurchasedAdapter;
     List<FinishRentalItem> receiptRentalItemList;
-    List<ReceiptOrderPurchased> receiptPurchasedList;
+    List<OrderPurchasedItem> receiptPurchasedList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,10 +53,10 @@ public class ReceiptActivity extends AppCompatActivity implements View.OnClickLi
 
         //List Purchased Item
         receiptPurchasedList = new ArrayList<>();
-        receiptPurchasedList.add(new ReceiptOrderPurchased("Pinset Anatomis",6));
-        receiptPurchasedList.add(new ReceiptOrderPurchased("Pinset Anatomis",6));
-        receiptPurchasedList.add(new ReceiptOrderPurchased("Pinset Anatomis",6));
-        receiptPurchasedList.add(new ReceiptOrderPurchased("Pinset Anatomis",6));
+        receiptPurchasedList.add(new OrderPurchasedItem("Pinset Anatomis",6));
+        receiptPurchasedList.add(new OrderPurchasedItem("Pinset Anatomis",6));
+        receiptPurchasedList.add(new OrderPurchasedItem("Pinset Anatomis",6));
+        receiptPurchasedList.add(new OrderPurchasedItem("Pinset Anatomis",6));
 
 
         //Setup adapter rental

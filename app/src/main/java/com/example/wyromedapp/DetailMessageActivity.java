@@ -78,7 +78,7 @@ public class DetailMessageActivity extends AppCompatActivity implements View.OnC
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.btn_confirm_pesanan:
-                Intent confim = new Intent(DetailMessageActivity.this, HandoverActivity.class);
+                Intent confim = new Intent(DetailMessageActivity.this, ConfirmOrderActivity.class);
                 startActivity(confim);
                 break;
         }

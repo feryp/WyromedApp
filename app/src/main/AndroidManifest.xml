@@ -22,13 +22,13 @@
         <activity android:name=".SalesOrderActivity" />
         <activity android:name=".ReceiptActivity" />
         <activity android:name=".FinishOperationActivity" />
-        <activity android:name=".InUseActivity" />
+        <activity android:name=".OperationActivity" />
         <activity android:name=".ConfirmSignatureActivity" />
         <activity android:name=".ChangePasswordActivity" />
         <activity android:name=".NotificationActivity" />
         <activity android:name=".MyBookingActivity" />
         <activity android:name=".HistoryTransactionsActivity" />
-        <activity android:name=".HandoverActivity" />
+        <activity android:name=".ConfirmOrderActivity" />
         <activity android:name=".DetailSalesActivity" />
         <activity android:name=".StockRequestActivity" />
         <activity android:name=".DetailMessageActivity" />

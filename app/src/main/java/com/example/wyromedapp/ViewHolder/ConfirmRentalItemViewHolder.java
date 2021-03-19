@@ -8,17 +8,18 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.wyromedapp.R;
 
-public class OrderRentalItemAcceptedViewHolder extends RecyclerView.ViewHolder{
+import org.w3c.dom.Text;
+
+public class ConfirmRentalItemViewHolder extends RecyclerView.ViewHolder  {
 
     public TextView tvNamaBarangRental;
-    public TextView tvTitleStatus;
-    public TextView tvStatusAccepted;
+    public TextView tvStatusConfirmRental;
 
-    public OrderRentalItemAcceptedViewHolder(@NonNull View itemView) {
+    public ConfirmRentalItemViewHolder(@NonNull View itemView) {
         super(itemView);
 
         tvNamaBarangRental = itemView.findViewById(R.id.tv_nama_barang_rental_order);
-        tvTitleStatus = itemView.findViewById(R.id.tv_title_status_rental_order);
-        tvStatusAccepted = itemView.findViewById(R.id.tv_status_rental_order);
+        tvStatusConfirmRental = itemView.findViewById(R.id.tv_status_rental_order);
+
     }
 }
