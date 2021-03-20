@@ -201,8 +201,9 @@
     <string name="title_new_password">New Password</string>
     <string name="create_a_new_password_for_the_account_with_email">Create a new password for the account with email</string>
 
-    <!-- in use screen -->
+    <!-- in operation screen -->
     <string name="app_bar_in_use">Operation</string>
+    <string name="btn_add_item_purchased">Add Item</string>
     <string name="btn_finish">Finish</string>
 
     <!-- finishing screen -->
@@ -244,6 +245,25 @@
     <string name="ask_the_nurse_chief_to_sign_to_confirm_the_handover_of_item">Ask the nurse chief to sign to confirm the handover of item</string>
     <string name="title_salesman_signature">Salesman Signature</string>
     <string name="ask_the_salesman_to_sign_to_confirm_the_handover_of_item">Ask the salesman to sign to confirm the handover of item</string>
+
+    <!-- accept add item purchased screen -->
+    <string name="title_add_item">Add Item</string>
+    <string name="btn_clear">Clear</string>
+    <string name="et_amount_purchased_item">Amount</string>
+    <string name="btn_add">Add</string>
+
+    <!-- accept add patient screen -->
+    <string name="edt_medical_record_botsheet">Medical Record</string>
+    <string name="edt_payment_status_botsheet">Payment Status</string>
+    <string name="btn_add_patient">Add Patient</string>
+    <string name="btn_save_patient">Save</string>
+
+    <!-- accept patient screen -->
+    <string name="appbar_patient">Patient</string>
+    <string name="edt_patient_name">Patient Name</string>
+    <string name="edt_medical_record">Medical Record</string>
+
+
 
 
 </resources>

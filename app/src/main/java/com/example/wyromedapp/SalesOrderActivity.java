@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
@@ -45,6 +46,9 @@ public class SalesOrderActivity extends AppCompatActivity implements View.OnClic
     List<SalesOrderRentItem> salesRentItemList;
     List<SalesOrderPurchaseItem> salesPurchasedItemList;
 
+    TextView tvMedicalRecord;
+    TextView tvPaymentStatus;
+    TextView tvSelectedPatient;
     TextView tvSelectPaymentMethod;
     TextView tvSelectedDueDate;
     ImageButton btnDueDate;
@@ -61,6 +65,10 @@ public class SalesOrderActivity extends AppCompatActivity implements View.OnClic
         rvRentItem = findViewById(R.id.rv_sales_order_rental_item);
         rvPurchasedItem = findViewById(R.id.rv_sales_order_puchased_item);
 
+        tvMedicalRecord = findViewById(R.id.tv_sales_order_medical_record);
+        tvPaymentStatus = findViewById(R.id.tv_sales_order_payment_status);
+
+        tvSelectedPatient = findViewById(R.id.tv_sales_order_patient_name);
         tvSelectPaymentMethod = findViewById(R.id.tv_sales_order_payment_method);
         tvSelectedDueDate = findViewById(R.id.tv_sales_order_due_date);
         btnDueDate = findViewById(R.id.btn_open_calendar_due_date);
@@ -71,6 +79,7 @@ public class SalesOrderActivity extends AppCompatActivity implements View.OnClic
         btnSendSO.setOnClickListener(this);
         btnFinishSO.setOnClickListener(this);
         tvSelectPaymentMethod.setOnClickListener(this);
+        tvSelectedPatient.setOnClickListener(this);
         btnDueDate.setOnClickListener(this);
 
         //List Sales Rent Item
@@ -105,9 +114,36 @@ public class SalesOrderActivity extends AppCompatActivity implements View.OnClic
                 finish();
                 break;
 
+            case R.id.tv_sales_order_patient_name:
+                final BottomSheetDialog bottomSheetDialogPatient = new BottomSheetDialog(SalesOrderActivity.this, R.style.BottomSheetDialogTheme);
+                View bottomSheetViewPatient = LayoutInflater.from(getApplicationContext()).inflate(
+                        R.layout.layout_bottom_sheet_patient,
+                        (LinearLayout)findViewById(R.id.bottom_sheet_container_patient));
+
+                bottomSheetViewPatient.findViewById(R.id.btn_add_patient).setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Toast.makeText(SalesOrderActivity.this, "Add Patient", Toast.LENGTH_SHORT).show();
+                        Intent addPatient = new Intent(SalesOrderActivity.this, FormPatientActivity.class);
+                        startActivity(addPatient);
+                    }
+                });
+
+                bottomSheetViewPatient.findViewById(R.id.btn_save_patient).setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Toast.makeText(SalesOrderActivity.this, "Save Patient", Toast.LENGTH_SHORT).show();
+                        bottomSheetDialogPatient.dismiss();
+                    }
+                });
+
+                bottomSheetDialogPatient.setContentView(bottomSheetViewPatient);
+                bottomSheetDialogPatient.show();
+                break;
+
             case R.id.tv_sales_order_payment_method:
-                final BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(SalesOrderActivity.this, R.style.BottomSheetDialogTheme);
-                View bottomSheetView = LayoutInflater.from(getApplicationContext()).inflate(
+                final BottomSheetDialog bottomSheetDialogPaymentOrder = new BottomSheetDialog(SalesOrderActivity.this, R.style.BottomSheetDialogTheme);
+                View bottomSheetViewPaymentOrder = LayoutInflater.from(getApplicationContext()).inflate(
                         R.layout.layout_bottom_sheet_payment_method,
                         (LinearLayout)findViewById(R.id.bottom_sheet_container_payment_method));
 
@@ -122,15 +158,15 @@ public class SalesOrderActivity extends AppCompatActivity implements View.OnClic
 //                    Toast.makeText(SalesOrderActivity.this, selectPaymentButton.getText(), Toast.LENGTH_SHORT).show();
 //                }
 
-                bottomSheetView.findViewById(R.id.btn_choose_payment_method).setOnClickListener(new View.OnClickListener() {
+                bottomSheetViewPaymentOrder.findViewById(R.id.btn_choose_payment_method).setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         Toast.makeText(SalesOrderActivity.this, "Payment Method", Toast.LENGTH_SHORT).show();
-                        bottomSheetDialog.dismiss();
+                        bottomSheetDialogPaymentOrder.dismiss();
                     }
                 });
-                bottomSheetDialog.setContentView(bottomSheetView);
-                bottomSheetDialog.show();
+                bottomSheetDialogPaymentOrder.setContentView(bottomSheetViewPaymentOrder);
+                bottomSheetDialogPaymentOrder.show();
                 break;
 
             case R.id.btn_open_calendar_due_date:

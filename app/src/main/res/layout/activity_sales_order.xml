@@ -90,7 +90,7 @@
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true"
                     android:fontFamily="@font/montserrat_regular"
-                    android:text="A-112"
+                    tools:text="A-112"
                     android:textColor="@color/colorGrey"
                     android:textSize="12sp" />
 
@@ -126,7 +126,7 @@
                     android:layout_centerVertical="true"
                     android:layout_marginTop="18dp"
                     android:fontFamily="@font/montserrat_regular"
-                    android:text="29 July 2020"
+                    tools:text="29 July 2020"
                     android:textColor="@color/colorGray"
                     android:textSize="12sp"
                     tools:ignore="MissingConstraints" />
@@ -162,7 +162,7 @@
                     android:layout_centerVertical="true"
                     android:layout_marginTop="18dp"
                     android:fontFamily="@font/montserrat_regular"
-                    android:text="RS. Omni Pulomas"
+                    tools:text="RS. Omni Pulomas"
                     android:textColor="@color/colorGray"
                     android:textSize="12sp"
                     tools:ignore="MissingConstraints" />
@@ -198,7 +198,7 @@
                     android:layout_centerVertical="true"
                     android:layout_marginTop="18dp"
                     android:fontFamily="@font/montserrat_regular"
-                    android:text="Farhan Hidayat"
+                    android:text="-Select-"
                     android:textColor="@color/colorGray"
                     android:textSize="12sp"
                     tools:ignore="MissingConstraints" />
@@ -234,7 +234,7 @@
                     android:layout_centerVertical="true"
                     android:layout_marginTop="18dp"
                     android:fontFamily="@font/montserrat_regular"
-                    android:text="MR-111-1111"
+                    android:text="~"
                     android:textColor="@color/colorGray"
                     android:textSize="12sp"
                     tools:ignore="MissingConstraints" />
@@ -270,7 +270,7 @@
                     android:layout_centerVertical="true"
                     android:layout_marginTop="18dp"
                     android:fontFamily="@font/montserrat_regular"
-                    android:text="BPJS"
+                    android:text="~"
                     android:textColor="@color/colorGray"
                     android:textSize="12sp"
                     tools:ignore="MissingConstraints" />

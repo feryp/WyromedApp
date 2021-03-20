@@ -198,7 +198,7 @@
                     android:layout_centerVertical="true"
                     android:layout_marginTop="18dp"
                     android:fontFamily="@font/montserrat_regular"
-                    android:text="Farhan Hidayat"
+                    android:text="-Select-"
                     android:textColor="@color/colorGray"
                     android:textSize="16sp"
                     tools:ignore="MissingConstraints" />
@@ -234,7 +234,7 @@
                     android:layout_centerVertical="true"
                     android:layout_marginTop="18dp"
                     android:fontFamily="@font/montserrat_regular"
-                    android:text="MR-111-1111"
+                    android:text="~"
                     android:textColor="@color/colorGray"
                     android:textSize="16sp"
                     tools:ignore="MissingConstraints" />
@@ -270,7 +270,7 @@
                     android:layout_centerVertical="true"
                     android:layout_marginTop="18dp"
                     android:fontFamily="@font/montserrat_regular"
-                    android:text="BPJS"
+                    android:text="~"
                     android:textColor="@color/colorGray"
                     android:textSize="16sp"
                     tools:ignore="MissingConstraints" />

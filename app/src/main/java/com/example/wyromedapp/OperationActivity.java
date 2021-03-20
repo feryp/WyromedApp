@@ -7,14 +7,21 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
+import android.widget.Toast;
 
+import com.chivorn.smartmaterialspinner.SmartMaterialSpinner;
+import com.deishelon.roundedbottomsheet.RoundedBottomSheetDialog;
 import com.example.wyromedapp.Adapter.OperationPurchasedAdapter;
 import com.example.wyromedapp.Adapter.OperationRentalAdapter;
 import com.example.wyromedapp.Model.Operation;
 import com.example.wyromedapp.Model.OrderPurchasedItem;
+import com.google.android.material.bottomsheet.BottomSheetDialog;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,11 +30,12 @@ public class OperationActivity extends AppCompatActivity implements View.OnClick
 
     RecyclerView rvOrderRental, rvOrderPurchased;
     ImageButton back;
-    Button btnFinish;
+    Button btnFinish, btnAddItemPurchased;
     OperationRentalAdapter operationRentalAdapter;
     OperationPurchasedAdapter operationPurchasedAdapter;
     List<Operation> operationItemRental;
     List<OrderPurchasedItem> operationItemPurchased;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,10 +47,12 @@ public class OperationActivity extends AppCompatActivity implements View.OnClick
         rvOrderRental = findViewById(R.id.rv_order_rental_operation);
         rvOrderPurchased = findViewById(R.id.rv_order_purchased_operation);
         btnFinish = findViewById(R.id.btn_finish_operation);
+        btnAddItemPurchased = findViewById(R.id.btn_add_item_purchased);
 
         //SET LISTENER
         back.setOnClickListener(this);
         btnFinish.setOnClickListener(this);
+        btnAddItemPurchased.setOnClickListener(this);
 
         //List Rental Item
         operationItemRental = new ArrayList<>();
@@ -84,6 +94,28 @@ public class OperationActivity extends AppCompatActivity implements View.OnClick
             case R.id.btn_finish_operation:
                 Intent finish = new Intent(OperationActivity.this, FinishOperationActivity.class);
                 startActivity(finish);
+                break;
+
+            case R.id.btn_add_item_purchased:
+                final BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(OperationActivity.this, R.style.BottomSheetDialogTheme);
+                View bottomSheetView = LayoutInflater.from(getApplicationContext()).inflate(
+                        R.layout.layout_bottom_sheet_item_purchased,
+                        (LinearLayout)findViewById(R.id.bottom_sheet_container_purchased));
+
+                SmartMaterialSpinner spinnerItem = findViewById(R.id.purchased_item_id);
+                EditText etAmount = findViewById(R.id.edt_amount_pitem);
+
+
+                bottomSheetView.findViewById(R.id.btn_add_purchased).setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Toast.makeText(OperationActivity.this, "Purchased item", Toast.LENGTH_SHORT).show();
+                        bottomSheetDialog.dismiss();
+                    }
+                });
+
+                bottomSheetDialog.setContentView(bottomSheetView);
+                bottomSheetDialog.show();
                 break;
         }
     }

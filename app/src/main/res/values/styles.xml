@@ -74,6 +74,11 @@
         <item name="android:background">@android:color/transparent</item>
     </style>
 
+    <style name="SpinnerTheme">
+        <item name="android:fontFamily">@font/montserrat_regular</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
 
     <style name="AppTheme.AppBarOverlay" parent="Theme.AppCompat.Light"/>
     <style name="AppTheme.PopUpOverlay" parent="Theme.AppCompat.Light"/>
